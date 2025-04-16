@@ -1,7 +1,8 @@
-[gd_scene load_steps=32 format=3 uid="uid://7svo2702rp0y"]
+[gd_scene load_steps=31 format=3 uid="uid://7svo2702rp0y"]
 
-[ext_resource type="Script" uid="uid://b7hcyfe86cpah" path="res://game/main-track/player.gd" id="1_j8ggn"]
+[ext_resource type="Script" uid="uid://b71mceta8044l" path="res://game/main-track/player.gd" id="1_j8ggn"]
 [ext_resource type="ArrayMesh" uid="uid://ccuthpw31mcyn" path="res://game/second-track/Secondtrack/Secondtrack.obj" id="2_gb1yd"]
+[ext_resource type="ArrayMesh" uid="uid://u8b3f1hc3qey" path="res://kenney_car-kit/Models/OBJ format/sedan-sports.obj" id="2_ig56e"]
 [ext_resource type="ArrayMesh" uid="uid://cao8teiy6mfp8" path="res://game/second-track/Tree/Tree.obj" id="3_ig56e"]
 [ext_resource type="ArrayMesh" uid="uid://c08cveuxfi26p" path="res://game/second-track/Rock/Rock.obj" id="4_occ6e"]
 [ext_resource type="ArrayMesh" uid="uid://c002c81mwudm0" path="res://game/second-track/Cone/Cone.obj" id="5_qjjby"]
@@ -20,12 +21,6 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j8ggn"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pwo8v"]
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_rv0bg"]
-size = Vector3(2, 2, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h12lf"]
 size = Vector3(2.2, 2.2, 2.2)
@@ -107,10 +102,10 @@ current = true
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Player"]
 shape = SubResource("CapsuleShape3D_j8ggn")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/CollisionShape3D2"]
-material_override = SubResource("StandardMaterial3D_pwo8v")
-mesh = SubResource("BoxMesh_rv0bg")
-skeleton = NodePath("")
+[node name="Sedan-sports" type="MeshInstance3D" parent="Player/CollisionShape3D2"]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, -0.0185127, -1.3, 0.140764)
+mesh = ExtResource("2_ig56e")
+skeleton = NodePath("../../..")
 
 [node name="Area3D" type="Area3D" parent="Player"]
 
