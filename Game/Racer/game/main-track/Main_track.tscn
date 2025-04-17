@@ -1,9 +1,5 @@
 [gd_scene load_steps=19 format=3 uid="uid://dm37hr858b42v"]
 
-<<<<<<< HEAD
-[ext_resource type="Script" uid="uid://c0ekdbfs266af" path="res://game/main-track/player.gd" id="1_6baeo"]
-[ext_resource type="PackedScene" uid="uid://bobv2bdyym4yp" path="res://game/main-track/Racetrack.gltf" id="2_ouk12"]
-=======
 [ext_resource type="Script" uid="uid://b7hcyfe86cpah" path="res://game/main-track/player.gd" id="1_6baeo"]
 [ext_resource type="ArrayMesh" uid="uid://dtm8dy4ic7uhs" path="res://game/main-track/Racetrack.obj" id="2_6baeo"]
 
@@ -46,7 +42,6 @@ func _on_net_area_3d_area_shape_entered(_area_rid: RID, area: Area3D, _area_shap
 		player.global_transform.origin = input_vector
 		
 "
->>>>>>> b11165987e651ddcfa48c8e9e09387ca9189fd30
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f3sb7"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
