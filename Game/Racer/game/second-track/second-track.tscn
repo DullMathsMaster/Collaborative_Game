@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://7svo2702rp0y"]
+[gd_scene load_steps=41 format=3 uid="uid://7svo2702rp0y"]
 
 [ext_resource type="Script" uid="uid://meo0k7ps05l1" path="res://game/second-track/second_track.gd" id="1_gb1yd"]
 [ext_resource type="Script" uid="uid://b7hcyfe86cpah" path="res://game/main-track/player.gd" id="1_j8ggn"]
@@ -6,6 +6,8 @@
 [ext_resource type="ArrayMesh" uid="uid://cao8teiy6mfp8" path="res://game/second-track/Tree/Tree.obj" id="3_ig56e"]
 [ext_resource type="ArrayMesh" uid="uid://c08cveuxfi26p" path="res://game/second-track/Rock/Rock.obj" id="4_occ6e"]
 [ext_resource type="ArrayMesh" uid="uid://c002c81mwudm0" path="res://game/second-track/Cone/Cone.obj" id="5_qjjby"]
+[ext_resource type="Texture2D" uid="uid://c2ce6at5av1tm" path="res://game/second-track/Screenshot 2025-04-17 223841.png" id="7_ig56e"]
+[ext_resource type="Script" uid="uid://ds63lvy2i2w1n" path="res://game/second-track/nav_bar.gd" id="7_occ6e"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_soe5c"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -97,6 +99,17 @@ size = Vector3(1, 20, 30)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_j8ggn"]
 data = PackedVector3Array(-0.5, 10, 15, 0.5, 10, 15, -0.5, -10, 15, 0.5, 10, 15, 0.5, -10, 15, -0.5, -10, 15, 0.5, 10, -15, -0.5, 10, -15, 0.5, -10, -15, -0.5, 10, -15, -0.5, -10, -15, 0.5, -10, -15, 0.5, 10, 15, 0.5, 10, -15, 0.5, -10, 15, 0.5, 10, -15, 0.5, -10, -15, 0.5, -10, 15, -0.5, 10, -15, -0.5, 10, 15, -0.5, -10, -15, -0.5, 10, 15, -0.5, -10, 15, -0.5, -10, -15, 0.5, 10, 15, -0.5, 10, 15, 0.5, 10, -15, -0.5, 10, 15, -0.5, 10, -15, 0.5, 10, -15, -0.5, -10, 15, 0.5, -10, 15, -0.5, -10, -15, 0.5, -10, 15, 0.5, -10, -15, -0.5, -10, -15)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_gb1yd"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ig56e"]
+
+[sub_resource type="GDScript" id="GDScript_qjjby"]
+script/source = "extends MenuButton
+
+
+"
 
 [node name="Second-track" type="Node3D"]
 script = ExtResource("1_gb1yd")
@@ -502,5 +515,112 @@ mesh = SubResource("BoxMesh_gb1yd")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Checkpoint"]
 shape = SubResource("ConcavePolygonShape3D_j8ggn")
 
+[node name="Sprite3D" type="Sprite3D" parent="Checkpoint"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+transparency = 1.0
+texture = SubResource("ViewportTexture_gb1yd")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+
+[node name="Label" type="Label" parent="SubViewport"]
+offset_right = 167.0
+offset_bottom = 49.0
+text = "This is the checkpoint
+"
+label_settings = SubResource("LabelSettings_ig56e")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NavBar" type="Panel" parent="CanvasLayer/UI"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+size_flags_stretch_ratio = 4.0
+script = ExtResource("7_occ6e")
+
+[node name="MapButton" type="CheckButton" parent="CanvasLayer/UI/NavBar"]
+layout_mode = 0
+offset_left = 69.0
+offset_right = 152.0
+offset_bottom = 40.0
+text = "Map"
+
+[node name="MenuButton" type="MenuButton" parent="CanvasLayer/UI/NavBar"]
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 40.0
+text = "Menu"
+item_count = 2
+popup/item_0/text = "Main"
+popup/item_0/checked = true
+popup/item_0/id = 0
+popup/item_1/text = "Controls"
+popup/item_1/checked = true
+popup/item_1/id = 1
+script = SubResource("GDScript_qjjby")
+
+[node name="Button" type="Button" parent="CanvasLayer/UI/NavBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.964
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.52808
+text = "Close"
+
+[node name="Map" type="Panel" parent="CanvasLayer"]
+offset_top = 40.0
+offset_right = 200.0
+offset_bottom = 240.0
+size_flags_horizontal = 0
+size_flags_stretch_ratio = 1.65
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Map"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_ig56e")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Map"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 6.0
+offset_right = -181.0
+offset_bottom = -184.0
+color = Color(0.65098, 0.0509804, 0.0509804, 1)
+
+[node name="MenuSpace" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_top = 0.062
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.176003
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[connection signal="script_changed" from="Player" to="." method="_on_player_script_changed"]
 [connection signal="area_exited" from="Checkpoint" to="." method="_on_checkpoint_area_exited"]
 [connection signal="body_exited" from="Checkpoint" to="." method="_on_checkpoint_body_exited"]
+[connection signal="toggled" from="CanvasLayer/UI/NavBar/MapButton" to="CanvasLayer/UI/NavBar" method="_on_map_button_toggled"]
+[connection signal="pressed" from="CanvasLayer/UI/NavBar/Button" to="CanvasLayer/UI/NavBar" method="_on_button_pressed"]

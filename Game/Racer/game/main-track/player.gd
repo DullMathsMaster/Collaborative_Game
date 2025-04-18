@@ -12,6 +12,7 @@ var current_velocity = 0
 
 # shortcuts to the child nodes
 @onready var camera = $Camera3D
+@onready var point = get_node("../CanvasLayer/Map/ColorRect")
 
 func _physics_process(delta):
 	var input_vector = Vector3.ZERO
@@ -46,5 +47,10 @@ func _physics_process(delta):
 		velocity.y = 0
 		if Input.is_action_just_pressed("ui_accept"):
 			velocity.y = JUMP_VELOCITY
-
+	
+	var map_pos = Vector2.ZERO  
+	var cube_pos = global_transform.origin
+	map_pos.y = (cube_pos.z + 225) / 2.25 - 5
+	map_pos.x = (cube_pos.x + 225) / 2.25 - 5
+	point.position = map_pos
 	move_and_slide()
