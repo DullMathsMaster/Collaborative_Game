@@ -15,7 +15,8 @@ var current_velocity = 0
 
 func _physics_process(delta):
 	var input_vector = Vector3.ZERO
-
+	var is_colliding = false
+	
 	#Turning left and rigjt
 	input_vector.z -= 1
 	if Input.is_action_pressed("ui_right"):
@@ -24,6 +25,7 @@ func _physics_process(delta):
 		rotate_y(1 * SENSITIVITY)
 
 	#Acceleration and deceleration
+			
 	if Input.is_action_pressed("ui_up"):
 		if current_velocity < MAX_SPEED:
 			current_velocity += ACCELERATION
@@ -48,3 +50,4 @@ func _physics_process(delta):
 			velocity.y = JUMP_VELOCITY
 
 	move_and_slide()
+	

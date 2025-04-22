@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://dftlmohchf5xe"]
+[gd_scene load_steps=9 format=3 uid="uid://dftlmohchf5xe"]
 
-[ext_resource type="Script" uid="uid://b71mceta8044l" path="res://game/main-track/player.gd" id="1_fhmfe"]
+[ext_resource type="Script" uid="uid://cxm43255pvws0" path="res://game/test-files/new_player.gd" id="1_kvd2m"]
 [ext_resource type="ArrayMesh" uid="uid://u8b3f1hc3qey" path="res://kenney_car-kit/Models/OBJ format/sedan-sports.obj" id="2_kvd2m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f3sb7"]
@@ -19,16 +19,9 @@ glow_enabled = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fj7yv"]
 albedo_color = Color(0.205791, 0.327325, 0, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_gv5m4"]
-size = Vector3(10, 10, 10)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kvd2m"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlwt5"]
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_aqk2v"]
-size = Vector3(10, 10, 10)
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8yqkt"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_kvd2m"]
 
 [node name="World" type="Node3D"]
 
@@ -48,31 +41,26 @@ use_collision = true
 size = Vector3(100, 1, 100)
 
 [node name="Player" type="CharacterBody3D" parent="."]
-script = ExtResource("1_fhmfe")
+script = ExtResource("1_kvd2m")
+
+[node name="Sedan-sports" type="MeshInstance3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500002, 0)
+mesh = ExtResource("2_kvd2m")
+skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
-shape = SubResource("BoxShape3D_gv5m4")
-debug_color = Color(0.996224, 0, 0.190852, 0.42)
-debug_fill = false
+transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, -1.5, 0, 1.5, -6.55671e-08, 0, 1.24067, 0)
+shape = SubResource("CapsuleShape3D_kvd2m")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/CollisionShape3D"]
-material_override = SubResource("StandardMaterial3D_tlwt5")
-mesh = SubResource("BoxMesh_aqk2v")
+[node name="CameraPivot" type="Node3D" parent="Player"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.963537, -0.267575, 0, 0.267575, 0.963537, 0, 1.46449, 0)
 
-[node name="Camera3D" type="Camera3D" parent="Player"]
-transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 50, 35, 50)
-current = true
+[node name="SpringArm3D" type="SpringArm3D" parent="Player/CameraPivot"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+shape = SubResource("SphereShape3D_kvd2m")
+spring_length = 4.0
 
-[node name="Capsule" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.88934, 0.500002, 9.46712)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Capsule"]
-transform = Transform3D(1.5, 0, 0, 0, 0.0683322, -1.49844, 0, 1.49844, 0.0683322, 0, 0.626236, 0)
-shape = SubResource("CapsuleShape3D_8yqkt")
-
-[node name="Sedan-sports" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.88934, 0.500002, 9.46712)
-mesh = ExtResource("2_kvd2m")
-
-[node name="Cube" type="Node3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="Player/CameraPivot/SpringArm3D"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
