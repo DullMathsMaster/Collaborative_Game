@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7vlarlc508k"]
+
+[ext_resource type="Script" uid="uid://ctgxautaq3vda" path="res://main-menu/racer-selection/racer_selection.gd" id="1_egnaw"]
+
+[node name="Racer-Selection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_egnaw")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Prev-Racer-Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.192
+anchor_top = 0.335
+anchor_right = 0.239
+anchor_bottom = 0.418
+offset_left = -0.184006
+offset_top = -0.0800018
+offset_right = -0.328003
+offset_bottom = 0.135986
+text = "<"
+
+[node name="Next-Racer-Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.34
+anchor_top = 0.326
+anchor_right = 0.387
+anchor_bottom = 0.409
+offset_left = 0.320007
+offset_top = -0.248001
+offset_right = 0.175964
+offset_bottom = -0.0320129
+text = ">"
+
+[node name="Confirm-Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 402.0
+offset_right = 728.0
+offset_bottom = 454.0
+text = "Confirm"
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.405
+anchor_top = 0.117
+anchor_right = 0.59
+anchor_bottom = 0.224
+offset_left = -0.560028
+offset_top = 0.183998
+offset_right = 0.319946
+offset_bottom = -0.152008
+text = "Choose Your Racer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/Prev-Racer-Button" to="." method="_on_prev_racer_button_pressed"]
+[connection signal="pressed" from="Panel/Next-Racer-Button" to="." method="_on_next_racer_button_pressed"]
+[connection signal="pressed" from="Panel/Confirm-Button" to="." method="_on_confirm_button_pressed"]
