@@ -1,59 +1,58 @@
-extends CharacterBody3D
+extends VehicleBody3D
 
-const MAX_SPEED = 100
-const JUMP_VELOCITY = 100
-const SENSITIVITY = 0.05
-const ACCELERATION = 2
-const GRAVITY = 20
-const DECELERATION = 2
+const MAX_STEER = 1.2
+const ENGINE_POWER = 500
+var wheels = {}
+var drift_spin_speed = 1
+const MOVEMENT_THRESHOLD = 1.0
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var current_velocity = 0
-var start_position: Vector3
 
-# shortcuts to the child nodes
-@onready var camera = $Camera3D
-
+func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	center_of_mass = Vector3(0, -1.2, 0)
 
 func _physics_process(delta):
-	var input_vector = Vector3.ZERO
-	input_vector.z -= 1
-	if Input.is_action_pressed("ui_right"):
-		rotate_y(-1 * SENSITIVITY)
-	if Input.is_action_pressed("ui_left"):
-		rotate_y(1 * SENSITIVITY)
-
-		
-	if Input.is_action_pressed("ui_up"):
-		if current_velocity < MAX_SPEED:
-			current_velocity += ACCELERATION
-	elif Input.is_action_pressed("ui_down"):
-		if current_velocity > -MAX_SPEED:
-			current_velocity -= ACCELERATION
-	else:
-		if current_velocity > 0:
-			current_velocity -= DECELERATION
-		elif current_velocity < 0:
-			current_velocity += DECELERATION
-
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	input_vector = (transform.basis * input_vector).normalized()
-	velocity = input_vector * current_velocity
-
-	if not is_on_floor():
-		velocity.y -= GRAVITY
-	else:
-		velocity.y = 0
-		if Input.is_action_just_pressed("ui_accept"):
-			velocity.y = JUMP_VELOCITY
-
-	move_and_slide()
+	var steer_input = Input.get_axis("ui_right", "ui_left")
+	steering = move_toward(steering, steer_input * MAX_STEER, delta * 100.0)
+	engine_force = Input.get_axis("ui_down", "ui_up") * ENGINE_POWER
 	
-	if global_transform.origin.y < -20:
-		var tf = global_transform
-		tf.origin = start_position
-		global_transform = tf
-		current_velocity = 0
-		velocity = Vector3.ZERO
+	var is_drift_pressed = Input.is_action_pressed("drift")
+	var turning = abs(steering) > 0.05
+	var drifting = is_drift_pressed
+	var forward = global_transform.basis.z.normalized()
+	var movement_direction = forward.dot(linear_velocity)
+	var moving = abs(movement_direction) > MOVEMENT_THRESHOLD
+	set_drift_mode(drifting)
+	
+	var speed = linear_velocity.length()
+	
+	set_drift_mode(drifting)
+	
+	angular_damp = 0.1 if turning else 3.0
+	
+	if turning and moving:  
+		apply_drift_spin(delta,movement_direction)
+
+
+func set_drift_mode(enabled):
+	for child in get_children():
+		if child is VehicleWheel3D:
+			match child.name:
+				"rear_left", "rear_right":
+					child.wheel_friction_slip = 0.8 if enabled else 7
+
+
+func apply_drift_spin(delta,movement_direction):
+	var velocity = linear_velocity
+	var forward = global_transform.basis.z.normalized()  # Car's forward direction
+	var side_force = forward.cross(Vector3.UP).normalized()
+	
+	var spin_direction = sign(steering)  # Drift should swing opposite to steering
+	
+	
+	# Apply opposite rotation when moving backward	
+	if movement_direction < 0:
+		spin_direction = -spin_direction
+	
+	angular_velocity.y += drift_spin_speed * spin_direction * delta
+	angular_velocity = angular_velocity
