@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b0327jfyyrox4"]
 
-[ext_resource type="Script" uid="uid://cid4mwxvaj6pg" path="res://main-menu/player-selection/player_selection.gd" id="1_otn16"]
+[ext_resource type="Script" uid="uid://benbpnfpca4a4" path="res://main-menu/player-selection/player_selection.gd" id="1_otn16"]
 
 [node name="Player-Selection" type="Control"]
 layout_mode = 3

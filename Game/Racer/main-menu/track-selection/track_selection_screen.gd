@@ -27,4 +27,4 @@ func _on_start_button_pressed() -> void:
 	if not GlobalData.game_track_path:
 		print("No track selected")
 		return
-	get_tree().change_scene_to_file(GlobalData.game_track_path)
+	UiLoader.load_into_men_space(GlobalData.game_track_path)

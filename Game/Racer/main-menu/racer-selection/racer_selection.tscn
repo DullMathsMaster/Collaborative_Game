@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c7vlarlc508k"]
 
-[ext_resource type="Script" uid="uid://ctgxautaq3vda" path="res://main-menu/racer-selection/racer_selection.gd" id="1_egnaw"]
+[ext_resource type="Script" uid="uid://c6n6hflr5liot" path="res://main-menu/racer-selection/racer_selection.gd" id="1_egnaw"]
 
 [node name="Racer-Selection" type="Control"]
 layout_mode = 3
@@ -13,7 +13,7 @@ script = ExtResource("1_egnaw")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -35,14 +35,14 @@ text = "<"
 [node name="Next-Racer-Button" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.34
-anchor_top = 0.326
-anchor_right = 0.387
-anchor_bottom = 0.409
-offset_left = 0.320007
-offset_top = -0.248001
-offset_right = 0.175964
-offset_bottom = -0.0320129
+anchor_left = 0.666
+anchor_top = 0.35
+anchor_right = 0.713
+anchor_bottom = 0.434
+offset_left = -4.23199
+offset_top = -0.800018
+offset_right = -4.3761
+offset_bottom = -1.23199
 text = ">"
 
 [node name="Confirm-Button" type="Button" parent="Panel"]

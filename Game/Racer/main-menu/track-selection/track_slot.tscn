@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bks0xxj6rei6g"]
 
-[ext_resource type="Script" uid="uid://dwwyi6nn43peb" path="res://main-menu/track-selection/track_slot.gd" id="1_5vvb0"]
-[ext_resource type="Texture2D" uid="uid://cargjeytewppn" path="res://assets/images/control-icons/keyboard_4_outline.svg" id="1_hgcct"]
+[ext_resource type="Script" uid="uid://cmhbv1kroaayi" path="res://main-menu/track-selection/track_slot.gd" id="1_5vvb0"]
+[ext_resource type="Texture2D" uid="uid://c0udcmjvntolo" path="res://assets/images/control-icons/keyboard_4_outline.svg" id="1_hgcct"]
 
 [node name="Track-4" type="Panel"]
 custom_minimum_size = Vector2(64, 64)
