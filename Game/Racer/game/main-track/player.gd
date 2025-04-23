@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 # Define some constants
 const MAX_SPEED = 100
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 100
 const SENSITIVITY = 0.05
 const ACCELERATION = 2
 const GRAVITY = 20
@@ -10,10 +10,12 @@ const DECELERATION = 2
 
 # Set the cube velocity to 0 initially
 var current_velocity = 0
+var start_position: Vector3
 
 # Shortcuts to the camera and map point
 @onready var camera = $Camera3D
 @onready var point = get_node("../CanvasLayer/Map/ColorRect")
+
 
 # For the movements of the actual car
 func _physics_process(delta):
@@ -61,3 +63,10 @@ func _physics_process(delta):
 	
 	# Move the car
 	move_and_slide()
+	
+	if global_transform.origin.y < -20:
+		var tf = global_transform
+		tf.origin = start_position
+		global_transform = tf
+		current_velocity = 0
+		velocity = Vector3.ZERO
