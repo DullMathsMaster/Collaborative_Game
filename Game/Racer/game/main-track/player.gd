@@ -21,7 +21,8 @@ var start_position: Vector3
 func _physics_process(delta):
 	# Create a vector to be edited for movement
 	var input_vector = Vector3.ZERO
-
+	var is_colliding = false
+	
 	# Turning left and rigjt
 	input_vector.z -= 1
 	if Input.is_action_pressed("ui_right"):

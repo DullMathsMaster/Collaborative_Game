@@ -7,7 +7,8 @@ extends Node
 func load_into_men_space(scene_path) -> void:
 	# Clear the panel first
 	for child in menuspace.get_children():
-		child.queue_free()
+		if child.name != "SubViewportContainer":
+			child.queue_free()
 	
 	# If close buton pressed, stop here
 	if scene_path == "null":

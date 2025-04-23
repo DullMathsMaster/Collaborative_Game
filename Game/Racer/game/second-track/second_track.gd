@@ -1,22 +1,22 @@
 extends Node3D
 
 # define constants for accessing checkpoint and red dot in map
-@onready var checkpoint = $Checkpoint
+@onready var checkpoint = $CanvasLayer/MenuSpace/SubViewportContainer/SubViewport/Checkpoint
 
 # These are the teleport coordinates and their corresponding rotations for the checkpoint to be in place
 const cp_pts = [
 	[
-		[-89.129, 5.0, 108.942],
-		[0.0, 5.0, 67.0],
-		[77.537, 5.0, 30.612],
-		[111.123, 5.0, -40.886],
-		[111.123, 5.0, -112.853],
-		[59.99, 5.0, -135.7],
-		[9.799, 5.0, -89.1],
-		[-47.874, 5.0, -73.84],
-		[-92.79, 5.0, -91.79],
-		[-117.678, 5.0, -19.58],
-		[-117.678, 5.0, 79.969]
+		[-29.71, 1.6667, 36.314],
+		[0.0, 1.6667, 22.3333],
+		[25.846, 1.6667, 10.204],
+		[37.041, 1.6667, -13.629],
+		[37.041, 1.6667, -37.6177],
+		[19.997, 1.6667, -45.2333],
+		[3.2663, 1.6667, -29.7],
+		[-15.958, 1.6667, -24.6133],
+		[-30.93, 1.6667, -30.5967],
+		[-39.226, 1.6667, -6.5267],
+		[-39.226, 1.6667, 26.6563]
 	],
 	[
 		[0.0, 25.0, 0.0],
