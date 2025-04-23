@@ -1,73 +1,69 @@
-extends CharacterBody3D
+extends VehicleBody3D
 
-# Define some constants
-const MAX_SPEED = 100
-const JUMP_VELOCITY = 100
-const SENSITIVITY = 0.05
-const ACCELERATION = 2
-const GRAVITY = 20
-const DECELERATION = 2
+# === Car Control Constants ===
+const MAX_STEER = 1.2
+const ENGINE_POWER = 500
+var wheels = {}
+var drift_spin_speed = 1
+const MOVEMENT_THRESHOLD = 1.0
 
-# Set the cube velocity to 0 initially
-var current_velocity = 0
-var start_position: Vector3
-
-# Shortcuts to the camera and map point
+# === Optional UI / Map / Camera Tracking ===
 @onready var camera = $Camera3D
 @onready var point = get_node("../CanvasLayer/Map/ColorRect")
+var start_position: Vector3
 
+func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	center_of_mass = Vector3(0, -0.5, 0)
+	start_position = global_transform.origin
 
-# For the movements of the actual car
 func _physics_process(delta):
-	# Create a vector to be edited for movement
-	var input_vector = Vector3.ZERO
-	var is_colliding = false
-	
-	# Turning left and rigjt
-	input_vector.z -= 1
-	if Input.is_action_pressed("ui_right"):
-		rotate_y(-1 * SENSITIVITY)
-	if Input.is_action_pressed("ui_left"):
-		rotate_y(1 * SENSITIVITY)
+	# Steering & Engine Force
+	var steer_input = Input.get_axis("ui_right", "ui_left")
+	steering = move_toward(steering, steer_input * MAX_STEER, delta * 100.0)
+	engine_force = Input.get_axis("ui_down", "ui_up") * ENGINE_POWER
 
-	# Acceleration and deceleration
-	if Input.is_action_pressed("ui_up"):
-		if current_velocity < MAX_SPEED:
-			current_velocity += ACCELERATION
-	elif Input.is_action_pressed("ui_down"):
-		if current_velocity > -MAX_SPEED:
-			current_velocity -= ACCELERATION
-	else:
-		if current_velocity > 0:
-			current_velocity -= DECELERATION
-		elif current_velocity < 0:
-			current_velocity += DECELERATION
-	
-	# Keep the same movement with  respect to the way the car is facing
-	input_vector = (transform.basis * input_vector).normalized()
-	velocity = input_vector * current_velocity
+	# Drift & Turn Logic
+	var is_drift_pressed = Input.is_action_pressed("drift")
+	var turning = abs(steering) > 0.05
+	var drifting = is_drift_pressed
+	var forward = global_transform.basis.z.normalized()
+	var movement_direction = forward.dot(linear_velocity)
+	var moving = abs(movement_direction) > MOVEMENT_THRESHOLD
+	set_drift_mode(drifting)
 
-	# Gravity
-	if not is_on_floor():
-		velocity.y -= GRAVITY
-	else:
-		velocity.y = 0
-		if Input.is_action_just_pressed("ui_accept"):
-			velocity.y = JUMP_VELOCITY
-	
-	# Chenge the point position on the map
-	var map_pos = Vector2.ZERO  
-	var cube_pos = global_transform.origin
-	map_pos.y = (cube_pos.z + 225) / 2.25 - 5
-	map_pos.x = (cube_pos.x + 225) / 2.25 - 5
+	angular_damp = 0.1 if turning else 3.0
+	if turning and moving:
+		apply_drift_spin(delta, movement_direction)
+
+	# Map tracking
+	var map_pos = Vector2.ZERO
+	var car_pos = global_transform.origin
+	map_pos.y = (car_pos.z + 225) / 2.25 - 5
+	map_pos.x = (car_pos.x + 225) / 2.25 - 5
 	point.position = map_pos
-	
-	# Move the car
-	move_and_slide()
-	
+
+	# Reset if car falls
 	if global_transform.origin.y < -20:
 		var tf = global_transform
 		tf.origin = start_position
 		global_transform = tf
-		current_velocity = 0
-		velocity = Vector3.ZERO
+		linear_velocity = Vector3.ZERO
+		angular_velocity = Vector3.ZERO
+
+
+func set_drift_mode(enabled):
+	for child in get_children():
+		if child is VehicleWheel3D:
+			match child.name:
+				"rear_left", "rear_right":
+					child.wheel_friction_slip = 0.8 if enabled else 7
+				"front_left", "front_right":
+					child.wheel_friction_slip = 1 if enabled else 1.0
+
+func apply_drift_spin(delta, movement_direction):
+	var spin_direction = sign(steering)
+	if movement_direction < 0:
+		spin_direction = -spin_direction
+	angular_velocity.y = lerp(angular_velocity.y, drift_spin_speed * spin_direction, delta * 10)
+	angular_velocity = angular_velocity
