@@ -1,8 +1,9 @@
 extends Node3D
 
-# define some constants for changing checkpoints
+# define constants for accessing checkpoint and red dot in map
 @onready var checkpoint = $Checkpoint
-@onready var point = $CanvasLayer/Map/ColorRect
+
+# These are the teleport coordinates and their corresponding rotations for the checkpoint to be in place
 const cp_pts = [
 	[
 		[-89.129, 5.0, 108.942],
@@ -31,25 +32,19 @@ const cp_pts = [
 		[0.0, 90.0, 0.0]
 	]
 ]
+# Define num of teleports
 const cp_pts_lgth = len(cp_pts[0])
+
+# The player starts at position 0
 var player_pos = 0
 
+
+# This is for moving the checkpoint and updating when the player passes through it
 func _on_checkpoint_area_exited(area: Area3D) -> void:
 	var player = area.get_parent()
-	
-	print("entered ", player_pos)
 	if player.name == "Player":
 		player_pos += 1
 		var in_vec = cp_pts[0][player_pos % cp_pts_lgth]
 		var in_rot = cp_pts[1][player_pos % cp_pts_lgth]
 		checkpoint.global_transform.origin = Vector3(in_vec[0], in_vec[1], in_vec[2])
 		checkpoint.rotation = Vector3(deg_to_rad(in_rot[0]), deg_to_rad(in_rot[1]), deg_to_rad(in_rot[2]))
-
-
-
-func _on_player_script_changed() -> void:
-	var map_pos = Vector2.ZERO  
-	map_pos[0] = (global_transform.origin[0] + 75) / 1.5
-	map_pos[1] = (global_transform.origin[2] + 75) / 1.5
-	print(map_pos)
-	point.position = map_pos

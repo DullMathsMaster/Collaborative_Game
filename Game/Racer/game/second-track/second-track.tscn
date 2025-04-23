@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://7svo2702rp0y"]
+[gd_scene load_steps=42 format=3 uid="uid://7svo2702rp0y"]
 
 [ext_resource type="Script" uid="uid://meo0k7ps05l1" path="res://game/second-track/second_track.gd" id="1_gb1yd"]
 [ext_resource type="Script" uid="uid://b7hcyfe86cpah" path="res://game/main-track/player.gd" id="1_j8ggn"]
@@ -109,6 +109,10 @@ viewport_path = NodePath("SubViewport")
 script/source = "extends MenuButton
 
 
+"
+
+[sub_resource type="GDScript" id="GDScript_occ6e"]
+script/source = "extends Panel
 "
 
 [node name="Second-track" type="Node3D"]
@@ -587,6 +591,7 @@ offset_right = 200.0
 offset_bottom = 240.0
 size_flags_horizontal = 0
 size_flags_stretch_ratio = 1.65
+script = SubResource("GDScript_occ6e")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Map"]
 layout_mode = 1
@@ -619,7 +624,6 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 
-[connection signal="script_changed" from="Player" to="." method="_on_player_script_changed"]
 [connection signal="area_exited" from="Checkpoint" to="." method="_on_checkpoint_area_exited"]
 [connection signal="body_exited" from="Checkpoint" to="." method="_on_checkpoint_body_exited"]
 [connection signal="toggled" from="CanvasLayer/UI/NavBar/MapButton" to="CanvasLayer/UI/NavBar" method="_on_map_button_toggled"]
