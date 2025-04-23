@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bwlapttdrc001"]
 
-[ext_resource type="Script" uid="uid://s4seaer63jxo" path="res://main-menu/track-selection/track_selection_screen.gd" id="1_p0rn4"]
+[ext_resource type="Script" uid="uid://b1u53y3nmjmqh" path="res://main-menu/track-selection/track_selection_screen.gd" id="1_p0rn4"]
 [ext_resource type="PackedScene" uid="uid://bks0xxj6rei6g" path="res://main-menu/track-selection/track_slot.tscn" id="2_8lahe"]
-[ext_resource type="Texture2D" uid="uid://dusxoe5o0tjaj" path="res://assets/images/control-icons/keyboard_1_outline.svg" id="3_p0rn4"]
-[ext_resource type="Texture2D" uid="uid://ckphwgql8n2uc" path="res://assets/images/control-icons/keyboard_2_outline.svg" id="4_7jkx5"]
-[ext_resource type="Texture2D" uid="uid://c0ngcgweku6ja" path="res://assets/images/control-icons/keyboard_3_outline.svg" id="5_t3hjs"]
+[ext_resource type="Texture2D" uid="uid://bpijnu4vvv27p" path="res://assets/images/control-icons/keyboard_1_outline.svg" id="3_p0rn4"]
+[ext_resource type="Texture2D" uid="uid://dlwfcus0n21bv" path="res://assets/images/control-icons/keyboard_2_outline.svg" id="4_7jkx5"]
+[ext_resource type="Texture2D" uid="uid://c84gnl48qytyw" path="res://assets/images/control-icons/keyboard_3_outline.svg" id="5_t3hjs"]
 
 [sub_resource type="Gradient" id="Gradient_8lahe"]
 colors = PackedColorArray(1, 0, 0.619608, 1, 0, 1, 1, 1)

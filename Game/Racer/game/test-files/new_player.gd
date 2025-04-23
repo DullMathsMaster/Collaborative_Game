@@ -16,6 +16,7 @@ var _gravity := -30.0
 @onready var _camera: Camera3D = %Camera3D
 @onready var _skin: MeshInstance3D = %Sedan
 @onready var _hitbox: CollisionShape3D = %Hitbox
+@onready var point = get_node("../../../../Map/ColorRect")
 
 
 func _input(event: InputEvent) -> void:
@@ -53,6 +54,14 @@ func _physics_process(delta: float) -> void:
 	velocity.y = 0.0
 	velocity = velocity.move_toward(move_direction * move_speed, acceleration * delta)
 	velocity.y = y_velocity + _gravity * delta
+	
+	# Change the point position on the map
+	var map_pos = Vector2.ZERO  
+	var cube_pos = global_transform.origin
+	map_pos.y = (cube_pos.z + 75) / (0.75) - 5
+	map_pos.x = (cube_pos.x + 75) / (0.75) - 5
+	point.position = map_pos
+	
 	move_and_slide()
 	
 	if move_direction.length() > 0.2:
