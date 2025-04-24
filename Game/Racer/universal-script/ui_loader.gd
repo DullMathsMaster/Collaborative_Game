@@ -3,7 +3,7 @@ extends Node
 # Set shortcut to the menu Panel
 @onready var menuspace = get_node("/root/Second-track/CanvasLayer/MenuSpace")
 
-# Flag for when the game starts
+# Flag for when the game starts and the time for the timer to be accessed globally
 var running = false
 var elapsed = Time.get_ticks_msec()
 
