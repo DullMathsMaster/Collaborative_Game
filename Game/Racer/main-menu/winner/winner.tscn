@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bmox3r4k72udb"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top_Scores" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.318
+anchor_top = 0.412
+anchor_right = 0.687
+anchor_bottom = 0.728
+offset_left = -0.336029
+offset_top = 0.0239868
+offset_right = 0.575928
+offset_bottom = 50.256
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="Leaderboard" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.299
+anchor_top = 0.176
+anchor_right = 0.702
+anchor_bottom = 0.404
+offset_left = -0.448029
+offset_top = -0.0480118
+offset_right = 0.295959
+offset_bottom = 0.207977
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 60
+text = "LEADERBOARD"
+horizontal_alignment = 1
