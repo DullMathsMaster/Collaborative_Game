@@ -1,16 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwlapttdrc001"]
+[gd_scene load_steps=6 format=3 uid="uid://bwlapttdrc001"]
 
-[ext_resource type="Script" uid="uid://b1u53y3nmjmqh" path="res://main-menu/track-selection/track_selection_screen.gd" id="1_p0rn4"]
+[ext_resource type="Script" uid="uid://s4seaer63jxo" path="res://main-menu/track-selection/track_selection_screen.gd" id="1_p0rn4"]
 [ext_resource type="PackedScene" uid="uid://bks0xxj6rei6g" path="res://main-menu/track-selection/track_slot.tscn" id="2_8lahe"]
-[ext_resource type="Texture2D" uid="uid://bpijnu4vvv27p" path="res://assets/images/control-icons/keyboard_1_outline.svg" id="3_p0rn4"]
-[ext_resource type="Texture2D" uid="uid://dlwfcus0n21bv" path="res://assets/images/control-icons/keyboard_2_outline.svg" id="4_7jkx5"]
-[ext_resource type="Texture2D" uid="uid://c84gnl48qytyw" path="res://assets/images/control-icons/keyboard_3_outline.svg" id="5_t3hjs"]
-
-[sub_resource type="Gradient" id="Gradient_8lahe"]
-colors = PackedColorArray(1, 0, 0.619608, 1, 0, 1, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_26s64"]
-gradient = SubResource("Gradient_8lahe")
+[ext_resource type="Texture2D" uid="uid://dusxoe5o0tjaj" path="res://assets/images/control-icons/keyboard_1_outline.svg" id="3_p0rn4"]
+[ext_resource type="Texture2D" uid="uid://ckphwgql8n2uc" path="res://assets/images/control-icons/keyboard_2_outline.svg" id="4_7jkx5"]
+[ext_resource type="Texture2D" uid="uid://c0ngcgweku6ja" path="res://assets/images/control-icons/keyboard_3_outline.svg" id="5_t3hjs"]
 
 [node name="Track-Selection" type="Control"]
 layout_mode = 3
@@ -21,16 +15,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_p0rn4")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("GradientTexture1D_26s64")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = 15
@@ -41,34 +32,34 @@ grow_vertical = 2
 theme_override_constants/separation = 150
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "Choose a Track"
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 theme_override_constants/separation = 300
 alignment = 1
 
-[node name="Track-1" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_8lahe")]
+[node name="Track-1" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("2_8lahe")]
 layout_mode = 2
 track_path = "res://main-menu/title-screen/title_screen.tscn"
 track_texture = ExtResource("3_p0rn4")
 
-[node name="Track-2" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_8lahe")]
+[node name="Track-2" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("2_8lahe")]
 layout_mode = 2
 track_path = "res://main-menu/title-screen/title_screen.tscn"
 track_texture = ExtResource("4_7jkx5")
 
-[node name="Track-3" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_8lahe")]
+[node name="Track-3" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("2_8lahe")]
 layout_mode = 2
 track_path = "res://main-menu/title-screen/title_screen.tscn"
 track_texture = ExtResource("5_t3hjs")
 
-[node name="Start-Button" type="Button" parent="VBoxContainer"]
+[node name="Start-Button" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "Start"
 
-[connection signal="pressed" from="VBoxContainer/Start-Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Start-Button" to="." method="_on_start_button_pressed"]
