@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://dm37hr858b42v"]
 
-[ext_resource type="Script" uid="uid://c0ekdbfs266af" path="res://game/main-track/player.gd" id="1_6baeo"]
+[ext_resource type="Script" uid="uid://b8je3qn8lj6cv" path="res://game/main-track/player.gd" id="1_6baeo"]
 [ext_resource type="ArrayMesh" uid="uid://dtm8dy4ic7uhs" path="res://game/main-track/Racetrack.obj" id="2_6baeo"]
 
 [sub_resource type="GDScript" id="GDScript_6baeo"]
