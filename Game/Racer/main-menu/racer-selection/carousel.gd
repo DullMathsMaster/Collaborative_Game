@@ -16,10 +16,10 @@ func _process(delta: float) -> void:
 		# If player 1 has selected their car
 		if GlobalData.two_player && GlobalData.player_one_car != -1:
 			GlobalData.player_one_car = -1
-			UiLoader.load_into_men_space("res://main-menu/racer-selection/carousel.tscn")
+			UiLoader.load_into_men_space("res://main-menu/racer-selection/racer_selection.tscn")
 		# If player 1 has not selected their car
 		else:
-			UiLoader.load_into_men_space("res://main-menu/player-selection/carousel.tscn")
+			UiLoader.load_into_men_space("res://main-menu/player-selection/racer_selection.tscn")
 
 
 func _set_selection():
@@ -77,7 +77,7 @@ func _on_racer_selection_button_pressed() -> void:
 	# If player 1 of 2 has just selected their car
 	if GlobalData.two_player && GlobalData.player_one_car == -1:
 		GlobalData.player_one_car = i
-		UiLoader.load_into_men_space("res://main-menu/racer-selection/carousel.tscn")
+		UiLoader.load_into_men_space("res://main-menu/racer-selection/racer_selection.tscn")
 	# If player 2 of 2 has just selected their car
 	elif GlobalData.two_player:
 		GlobalData.player_two_car = i
