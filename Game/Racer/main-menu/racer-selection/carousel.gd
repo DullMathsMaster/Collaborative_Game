@@ -11,6 +11,17 @@ func _ready() -> void:
 	_set_selection()
 
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		# If player 1 has selected their car
+		if GlobalData.two_player && GlobalData.player_one_car != -1:
+			GlobalData.player_one_car = -1
+			UiLoader.load_into_men_space("res://main-menu/racer-selection/carousel.tscn")
+		# If player 1 has not selected their car
+		else:
+			UiLoader.load_into_men_space("res://main-menu/player-selection/carousel.tscn")
+
+
 func _set_selection():
 	await get_tree().create_timer(0.01).timeout
 	_select_deselect_highlight()
@@ -44,7 +55,7 @@ func _tween_scroll(scroll_value):
 
 
 func _select_deselect_highlight():
-	var selected_node = get_selected_value()
+	var selected_node = get_selected_value()[0]
 	
 	for object in object_container.get_children():
 		if object is not TextureRect: continue
@@ -54,7 +65,24 @@ func _select_deselect_highlight():
 
 func get_selected_value():
 	var selected_position = %"Selection-Marker".global_position
-	
+	var i = -1
 	for object in object_container.get_children():
 		if object.get_global_rect().has_point(selected_position):
-			return object
+			return [object, i]
+		else: i = i + 1
+
+
+func _on_racer_selection_button_pressed() -> void:
+	var i = get_selected_value()[1]
+	# If player 1 of 2 has just selected their car
+	if GlobalData.two_player && GlobalData.player_one_car == -1:
+		GlobalData.player_one_car = i
+		UiLoader.load_into_men_space("res://main-menu/racer-selection/carousel.tscn")
+	# If player 2 of 2 has just selected their car
+	elif GlobalData.two_player:
+		GlobalData.player_two_car = i
+		UiLoader.load_into_men_space("res://main-menu/track-selection/track_selection.tscn")
+	# If player 1 of 1 has just selected car
+	else:
+		GlobalData.player_one_car = i
+		UiLoader.load_into_men_space("res://main-menu/track-selection/track_selection.tscn")

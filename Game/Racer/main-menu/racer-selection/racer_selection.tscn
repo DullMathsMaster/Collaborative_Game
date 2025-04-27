@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c7vlarlc508k"]
 
-[ext_resource type="Script" uid="uid://c6n6hflr5liot" path="res://main-menu/racer-selection/racer_selection.gd" id="1_egnaw"]
+[ext_resource type="Script" uid="uid://ctgxautaq3vda" path="res://main-menu/racer-selection/racer_selection.gd" id="1_egnaw"]
 
 [node name="Racer-Selection" type="Control"]
 layout_mode = 3
