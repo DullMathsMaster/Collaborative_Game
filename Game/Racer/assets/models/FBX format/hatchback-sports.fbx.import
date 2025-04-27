@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://crpm5axd0y0pm"
-path="res://.godot/imported/hatchback-sports.fbx-739fa2c8e9726da8b8ef4dfaea6fa538.scn"
+path="res://.godot/imported/hatchback-sports.fbx-a5b530bbc6f6130ae93c19d6eaa97fb2.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/FBX format/hatchback-sports.fbx"
-dest_files=["res://.godot/imported/hatchback-sports.fbx-739fa2c8e9726da8b8ef4dfaea6fa538.scn"]
+source_file="res://assets/models/FBX format/hatchback-sports.fbx"
+dest_files=["res://.godot/imported/hatchback-sports.fbx-a5b530bbc6f6130ae93c19d6eaa97fb2.scn"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cbje5k6dmtrwk"
-path="res://.godot/imported/debris-door-window.obj-bcd289c557934969192e70bcc3a4fa8d.mesh"
+path="res://.godot/imported/debris-door-window.obj-edb3cba09fa2af8f4aed73b0fccf66ee.mesh"
 
 [deps]
 
-files=["res://.godot/imported/debris-door-window.obj-bcd289c557934969192e70bcc3a4fa8d.mesh"]
+files=["res://.godot/imported/debris-door-window.obj-edb3cba09fa2af8f4aed73b0fccf66ee.mesh"]
 
-source_file="res://kenney_car-kit/Models/OBJ format/debris-door-window.obj"
-dest_files=["res://.godot/imported/debris-door-window.obj-bcd289c557934969192e70bcc3a4fa8d.mesh", "res://.godot/imported/debris-door-window.obj-bcd289c557934969192e70bcc3a4fa8d.mesh"]
+source_file="res://assets/models/OBJ format/debris-door-window.obj"
+dest_files=["res://.godot/imported/debris-door-window.obj-edb3cba09fa2af8f4aed73b0fccf66ee.mesh", "res://.godot/imported/debris-door-window.obj-edb3cba09fa2af8f4aed73b0fccf66ee.mesh"]
 
 [params]
 

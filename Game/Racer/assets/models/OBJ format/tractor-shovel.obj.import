@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://c0g8ij6e7f52u"
-path="res://.godot/imported/tractor-shovel.obj-4c269de5280228839a3408c8709a6d72.mesh"
+path="res://.godot/imported/tractor-shovel.obj-d481e8d2f25d7cc5b379c9a72c4ce9f0.mesh"
 
 [deps]
 
-files=["res://.godot/imported/tractor-shovel.obj-4c269de5280228839a3408c8709a6d72.mesh"]
+files=["res://.godot/imported/tractor-shovel.obj-d481e8d2f25d7cc5b379c9a72c4ce9f0.mesh"]
 
-source_file="res://kenney_car-kit/Models/OBJ format/tractor-shovel.obj"
-dest_files=["res://.godot/imported/tractor-shovel.obj-4c269de5280228839a3408c8709a6d72.mesh", "res://.godot/imported/tractor-shovel.obj-4c269de5280228839a3408c8709a6d72.mesh"]
+source_file="res://assets/models/OBJ format/tractor-shovel.obj"
+dest_files=["res://.godot/imported/tractor-shovel.obj-d481e8d2f25d7cc5b379c9a72c4ce9f0.mesh", "res://.godot/imported/tractor-shovel.obj-d481e8d2f25d7cc5b379c9a72c4ce9f0.mesh"]
 
 [params]
 

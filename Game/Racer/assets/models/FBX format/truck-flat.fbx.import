@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ckc7jeidqwwyw"
-path="res://.godot/imported/truck-flat.fbx-5ebbbd3574d8070acee0fc265acb0e1e.scn"
+path="res://.godot/imported/truck-flat.fbx-d69ed851f2431cebe71729a4a47297ac.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/FBX format/truck-flat.fbx"
-dest_files=["res://.godot/imported/truck-flat.fbx-5ebbbd3574d8070acee0fc265acb0e1e.scn"]
+source_file="res://assets/models/FBX format/truck-flat.fbx"
+dest_files=["res://.godot/imported/truck-flat.fbx-d69ed851f2431cebe71729a4a47297ac.scn"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bmrvslhtn6wgl"
-path="res://.godot/imported/cone-flat.obj-16bc718b47d7b62dd04a250d17637bd6.mesh"
+path="res://.godot/imported/cone-flat.obj-5265631bc79ede76eac86b38af73134b.mesh"
 
 [deps]
 
-files=["res://.godot/imported/cone-flat.obj-16bc718b47d7b62dd04a250d17637bd6.mesh"]
+files=["res://.godot/imported/cone-flat.obj-5265631bc79ede76eac86b38af73134b.mesh"]
 
-source_file="res://kenney_car-kit/Models/OBJ format/cone-flat.obj"
-dest_files=["res://.godot/imported/cone-flat.obj-16bc718b47d7b62dd04a250d17637bd6.mesh", "res://.godot/imported/cone-flat.obj-16bc718b47d7b62dd04a250d17637bd6.mesh"]
+source_file="res://assets/models/OBJ format/cone-flat.obj"
+dest_files=["res://.godot/imported/cone-flat.obj-5265631bc79ede76eac86b38af73134b.mesh", "res://.godot/imported/cone-flat.obj-5265631bc79ede76eac86b38af73134b.mesh"]
 
 [params]
 

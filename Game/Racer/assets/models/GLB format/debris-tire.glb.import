@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b5w7f1svvju1y"
-path="res://.godot/imported/debris-tire.glb-5f5260fca46827c5a14044c3f54f4c45.scn"
+path="res://.godot/imported/debris-tire.glb-b52801a583dde62ba9ca5c984016d280.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/GLB format/debris-tire.glb"
-dest_files=["res://.godot/imported/debris-tire.glb-5f5260fca46827c5a14044c3f54f4c45.scn"]
+source_file="res://assets/models/GLB format/debris-tire.glb"
+dest_files=["res://.godot/imported/debris-tire.glb-b52801a583dde62ba9ca5c984016d280.scn"]
 
 [params]
 

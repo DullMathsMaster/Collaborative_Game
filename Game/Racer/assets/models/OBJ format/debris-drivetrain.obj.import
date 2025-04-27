@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://b7unauht684tv"
-path="res://.godot/imported/debris-drivetrain.obj-1e6614eac1701e5eb181c1b16637e172.mesh"
+path="res://.godot/imported/debris-drivetrain.obj-17d6e3475a9e9b5e23d4590b958263ff.mesh"
 
 [deps]
 
-files=["res://.godot/imported/debris-drivetrain.obj-1e6614eac1701e5eb181c1b16637e172.mesh"]
+files=["res://.godot/imported/debris-drivetrain.obj-17d6e3475a9e9b5e23d4590b958263ff.mesh"]
 
-source_file="res://kenney_car-kit/Models/OBJ format/debris-drivetrain.obj"
-dest_files=["res://.godot/imported/debris-drivetrain.obj-1e6614eac1701e5eb181c1b16637e172.mesh", "res://.godot/imported/debris-drivetrain.obj-1e6614eac1701e5eb181c1b16637e172.mesh"]
+source_file="res://assets/models/OBJ format/debris-drivetrain.obj"
+dest_files=["res://.godot/imported/debris-drivetrain.obj-17d6e3475a9e9b5e23d4590b958263ff.mesh", "res://.godot/imported/debris-drivetrain.obj-17d6e3475a9e9b5e23d4590b958263ff.mesh"]
 
 [params]
 

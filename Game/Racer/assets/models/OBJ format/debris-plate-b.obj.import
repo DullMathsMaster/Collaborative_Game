@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://de3tr3t661pml"
-path="res://.godot/imported/debris-plate-b.obj-6e569379887800ca8b89b877d178cf15.mesh"
+path="res://.godot/imported/debris-plate-b.obj-9e0a87ba513a7af828a45f5947748cc9.mesh"
 
 [deps]
 
-files=["res://.godot/imported/debris-plate-b.obj-6e569379887800ca8b89b877d178cf15.mesh"]
+files=["res://.godot/imported/debris-plate-b.obj-9e0a87ba513a7af828a45f5947748cc9.mesh"]
 
-source_file="res://kenney_car-kit/Models/OBJ format/debris-plate-b.obj"
-dest_files=["res://.godot/imported/debris-plate-b.obj-6e569379887800ca8b89b877d178cf15.mesh", "res://.godot/imported/debris-plate-b.obj-6e569379887800ca8b89b877d178cf15.mesh"]
+source_file="res://assets/models/OBJ format/debris-plate-b.obj"
+dest_files=["res://.godot/imported/debris-plate-b.obj-9e0a87ba513a7af828a45f5947748cc9.mesh", "res://.godot/imported/debris-plate-b.obj-9e0a87ba513a7af828a45f5947748cc9.mesh"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bg36vhajy3trb"
-path="res://.godot/imported/debris-spoiler-a.fbx-567be3b6ce0b2a12d65a29927464eefc.scn"
+path="res://.godot/imported/debris-spoiler-a.fbx-47cbe4dc7c57c5a93b9c6b4632579d0f.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/FBX format/debris-spoiler-a.fbx"
-dest_files=["res://.godot/imported/debris-spoiler-a.fbx-567be3b6ce0b2a12d65a29927464eefc.scn"]
+source_file="res://assets/models/FBX format/debris-spoiler-a.fbx"
+dest_files=["res://.godot/imported/debris-spoiler-a.fbx-47cbe4dc7c57c5a93b9c6b4632579d0f.scn"]
 
 [params]
 

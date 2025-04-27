@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c1o1v0hsqs2ib"
-path="res://.godot/imported/police.fbx-acf5c72a06605083637f08d6eb3837a6.scn"
+path="res://.godot/imported/police.fbx-2eb4af358b90ec1026005c794235eb48.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/FBX format/police.fbx"
-dest_files=["res://.godot/imported/police.fbx-acf5c72a06605083637f08d6eb3837a6.scn"]
+source_file="res://assets/models/FBX format/police.fbx"
+dest_files=["res://.godot/imported/police.fbx-2eb4af358b90ec1026005c794235eb48.scn"]
 
 [params]
 

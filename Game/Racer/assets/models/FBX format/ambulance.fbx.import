@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ctqliqp2l1a58"
-path="res://.godot/imported/ambulance.fbx-92eda2395271b815f4cfaf2cb2804f37.scn"
+path="res://.godot/imported/ambulance.fbx-d366bbcc71dd0aeb41e044d861f753ce.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/FBX format/ambulance.fbx"
-dest_files=["res://.godot/imported/ambulance.fbx-92eda2395271b815f4cfaf2cb2804f37.scn"]
+source_file="res://assets/models/FBX format/ambulance.fbx"
+dest_files=["res://.godot/imported/ambulance.fbx-d366bbcc71dd0aeb41e044d861f753ce.scn"]
 
 [params]
 

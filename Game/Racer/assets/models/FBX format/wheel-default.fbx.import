@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://pw3x3edr1x2k"
-path="res://.godot/imported/wheel-default.fbx-343967a774da3f0a282eb7b1ee5aa429.scn"
+path="res://.godot/imported/wheel-default.fbx-dea1af7fdd8675eca6a915bec2eb3801.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/FBX format/wheel-default.fbx"
-dest_files=["res://.godot/imported/wheel-default.fbx-343967a774da3f0a282eb7b1ee5aa429.scn"]
+source_file="res://assets/models/FBX format/wheel-default.fbx"
+dest_files=["res://.godot/imported/wheel-default.fbx-dea1af7fdd8675eca6a915bec2eb3801.scn"]
 
 [params]
 

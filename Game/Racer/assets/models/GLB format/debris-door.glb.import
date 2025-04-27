@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ropnfo73ru2e"
-path="res://.godot/imported/debris-door.glb-04a7e1d5e240baf475129dcdc8a6cdbf.scn"
+path="res://.godot/imported/debris-door.glb-378a4950158371f656e589e98f8c7857.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/GLB format/debris-door.glb"
-dest_files=["res://.godot/imported/debris-door.glb-04a7e1d5e240baf475129dcdc8a6cdbf.scn"]
+source_file="res://assets/models/GLB format/debris-door.glb"
+dest_files=["res://.godot/imported/debris-door.glb-378a4950158371f656e589e98f8c7857.scn"]
 
 [params]
 

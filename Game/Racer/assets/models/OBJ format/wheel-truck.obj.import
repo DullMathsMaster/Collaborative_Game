@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://4xsn70bbk13h"
-path="res://.godot/imported/wheel-truck.obj-65f71f65eca353869f5cc82d68feca47.mesh"
+path="res://.godot/imported/wheel-truck.obj-b5a55b53e22f163d2cc758390d46e40a.mesh"
 
 [deps]
 
-files=["res://.godot/imported/wheel-truck.obj-65f71f65eca353869f5cc82d68feca47.mesh"]
+files=["res://.godot/imported/wheel-truck.obj-b5a55b53e22f163d2cc758390d46e40a.mesh"]
 
-source_file="res://kenney_car-kit/Models/OBJ format/wheel-truck.obj"
-dest_files=["res://.godot/imported/wheel-truck.obj-65f71f65eca353869f5cc82d68feca47.mesh", "res://.godot/imported/wheel-truck.obj-65f71f65eca353869f5cc82d68feca47.mesh"]
+source_file="res://assets/models/OBJ format/wheel-truck.obj"
+dest_files=["res://.godot/imported/wheel-truck.obj-b5a55b53e22f163d2cc758390d46e40a.mesh", "res://.godot/imported/wheel-truck.obj-b5a55b53e22f163d2cc758390d46e40a.mesh"]
 
 [params]
 

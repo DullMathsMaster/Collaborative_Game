@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bi1lfxxlnaup5"
-path="res://.godot/imported/wheel-tractor-front.obj-3be6f716b6d6a3e2116e14825ff6938f.mesh"
+path="res://.godot/imported/wheel-tractor-front.obj-28a197cef7b9010ac175f2ed27d3f5aa.mesh"
 
 [deps]
 
-files=["res://.godot/imported/wheel-tractor-front.obj-3be6f716b6d6a3e2116e14825ff6938f.mesh"]
+files=["res://.godot/imported/wheel-tractor-front.obj-28a197cef7b9010ac175f2ed27d3f5aa.mesh"]
 
-source_file="res://kenney_car-kit/Models/OBJ format/wheel-tractor-front.obj"
-dest_files=["res://.godot/imported/wheel-tractor-front.obj-3be6f716b6d6a3e2116e14825ff6938f.mesh", "res://.godot/imported/wheel-tractor-front.obj-3be6f716b6d6a3e2116e14825ff6938f.mesh"]
+source_file="res://assets/models/OBJ format/wheel-tractor-front.obj"
+dest_files=["res://.godot/imported/wheel-tractor-front.obj-28a197cef7b9010ac175f2ed27d3f5aa.mesh", "res://.godot/imported/wheel-tractor-front.obj-28a197cef7b9010ac175f2ed27d3f5aa.mesh"]
 
 [params]
 

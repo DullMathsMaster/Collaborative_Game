@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dpfjijv37cmjr"
-path="res://.godot/imported/box.glb-64eb8f6a457562feee14c4c6c6f4ad47.scn"
+path="res://.godot/imported/box.glb-8aaac42d35464b892ebaccfe8ecb8e61.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/GLB format/box.glb"
-dest_files=["res://.godot/imported/box.glb-64eb8f6a457562feee14c4c6c6f4ad47.scn"]
+source_file="res://assets/models/GLB format/box.glb"
+dest_files=["res://.godot/imported/box.glb-8aaac42d35464b892ebaccfe8ecb8e61.scn"]
 
 [params]
 

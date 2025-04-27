@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b3fmsr3tajm21"
-path="res://.godot/imported/wheel-dark.fbx-fc5f8a1bd5a09b7a6b5ab400be471d7a.scn"
+path="res://.godot/imported/wheel-dark.fbx-1605836404c2d6b2aafa12a2e9d76e36.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/FBX format/wheel-dark.fbx"
-dest_files=["res://.godot/imported/wheel-dark.fbx-fc5f8a1bd5a09b7a6b5ab400be471d7a.scn"]
+source_file="res://assets/models/FBX format/wheel-dark.fbx"
+dest_files=["res://.godot/imported/wheel-dark.fbx-1605836404c2d6b2aafa12a2e9d76e36.scn"]
 
 [params]
 

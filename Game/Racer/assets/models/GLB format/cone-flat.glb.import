@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dxe5snuktgsee"
-path="res://.godot/imported/cone-flat.glb-3518e79c67b4839a0944c32f103a8eda.scn"
+path="res://.godot/imported/cone-flat.glb-abed975c47b34c4d5b33aa9e6cc51917.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/GLB format/cone-flat.glb"
-dest_files=["res://.godot/imported/cone-flat.glb-3518e79c67b4839a0944c32f103a8eda.scn"]
+source_file="res://assets/models/GLB format/cone-flat.glb"
+dest_files=["res://.godot/imported/cone-flat.glb-abed975c47b34c4d5b33aa9e6cc51917.scn"]
 
 [params]
 

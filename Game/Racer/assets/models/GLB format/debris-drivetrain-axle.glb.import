@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://den7tjgaprepw"
-path="res://.godot/imported/debris-drivetrain-axle.glb-cf8d3e8ad05eff21b180952d15a23c92.scn"
+path="res://.godot/imported/debris-drivetrain-axle.glb-7d9c49e37d7209225da45f301755b1a8.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/GLB format/debris-drivetrain-axle.glb"
-dest_files=["res://.godot/imported/debris-drivetrain-axle.glb-cf8d3e8ad05eff21b180952d15a23c92.scn"]
+source_file="res://assets/models/GLB format/debris-drivetrain-axle.glb"
+dest_files=["res://.godot/imported/debris-drivetrain-axle.glb-7d9c49e37d7209225da45f301755b1a8.scn"]
 
 [params]
 

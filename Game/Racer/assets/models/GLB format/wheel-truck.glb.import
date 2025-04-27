@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://tg8yekbsoyky"
-path="res://.godot/imported/wheel-truck.glb-b31d49a4eaba46c39083c4b1423d9bae.scn"
+path="res://.godot/imported/wheel-truck.glb-6a02ac375f079cab4e27fcc410ddc43f.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/GLB format/wheel-truck.glb"
-dest_files=["res://.godot/imported/wheel-truck.glb-b31d49a4eaba46c39083c4b1423d9bae.scn"]
+source_file="res://assets/models/GLB format/wheel-truck.glb"
+dest_files=["res://.godot/imported/wheel-truck.glb-6a02ac375f079cab4e27fcc410ddc43f.scn"]
 
 [params]
 

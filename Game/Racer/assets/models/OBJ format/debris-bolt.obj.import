@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dws061ul5lqgu"
-path="res://.godot/imported/debris-bolt.obj-e33b591d187e6fc569923d7fbef310b7.mesh"
+path="res://.godot/imported/debris-bolt.obj-93abc89554679a97ce47cc7813cb4aaa.mesh"
 
 [deps]
 
-files=["res://.godot/imported/debris-bolt.obj-e33b591d187e6fc569923d7fbef310b7.mesh"]
+files=["res://.godot/imported/debris-bolt.obj-93abc89554679a97ce47cc7813cb4aaa.mesh"]
 
-source_file="res://kenney_car-kit/Models/OBJ format/debris-bolt.obj"
-dest_files=["res://.godot/imported/debris-bolt.obj-e33b591d187e6fc569923d7fbef310b7.mesh", "res://.godot/imported/debris-bolt.obj-e33b591d187e6fc569923d7fbef310b7.mesh"]
+source_file="res://assets/models/OBJ format/debris-bolt.obj"
+dest_files=["res://.godot/imported/debris-bolt.obj-93abc89554679a97ce47cc7813cb4aaa.mesh", "res://.godot/imported/debris-bolt.obj-93abc89554679a97ce47cc7813cb4aaa.mesh"]
 
 [params]
 

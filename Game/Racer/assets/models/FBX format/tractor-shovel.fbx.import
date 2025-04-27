@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dpcnmk31b26d5"
-path="res://.godot/imported/tractor-shovel.fbx-a3462300733854e133210cadb5386b2f.scn"
+path="res://.godot/imported/tractor-shovel.fbx-67e48170de330da7c23e4dd35cea4be8.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/FBX format/tractor-shovel.fbx"
-dest_files=["res://.godot/imported/tractor-shovel.fbx-a3462300733854e133210cadb5386b2f.scn"]
+source_file="res://assets/models/FBX format/tractor-shovel.fbx"
+dest_files=["res://.godot/imported/tractor-shovel.fbx-67e48170de330da7c23e4dd35cea4be8.scn"]
 
 [params]
 

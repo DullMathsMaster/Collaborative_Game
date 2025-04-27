@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cq8d54hgl2r76"
-path="res://.godot/imported/wheel-tractor-dark-back.obj-7dc156d0d6a8fbfc741eea4ec721515d.mesh"
+path="res://.godot/imported/wheel-tractor-dark-back.obj-e9ea0e49335ccc086b199b3ba8cbd478.mesh"
 
 [deps]
 
-files=["res://.godot/imported/wheel-tractor-dark-back.obj-7dc156d0d6a8fbfc741eea4ec721515d.mesh"]
+files=["res://.godot/imported/wheel-tractor-dark-back.obj-e9ea0e49335ccc086b199b3ba8cbd478.mesh"]
 
-source_file="res://kenney_car-kit/Models/OBJ format/wheel-tractor-dark-back.obj"
-dest_files=["res://.godot/imported/wheel-tractor-dark-back.obj-7dc156d0d6a8fbfc741eea4ec721515d.mesh", "res://.godot/imported/wheel-tractor-dark-back.obj-7dc156d0d6a8fbfc741eea4ec721515d.mesh"]
+source_file="res://assets/models/OBJ format/wheel-tractor-dark-back.obj"
+dest_files=["res://.godot/imported/wheel-tractor-dark-back.obj-e9ea0e49335ccc086b199b3ba8cbd478.mesh", "res://.godot/imported/wheel-tractor-dark-back.obj-e9ea0e49335ccc086b199b3ba8cbd478.mesh"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://b0acmwekwlcsr"
-path="res://.godot/imported/debris-spoiler-b.obj-d4f99cf5fc22772a13e26ab836287159.mesh"
+path="res://.godot/imported/debris-spoiler-b.obj-6d706a398f40453410b71d56a260b35e.mesh"
 
 [deps]
 
-files=["res://.godot/imported/debris-spoiler-b.obj-d4f99cf5fc22772a13e26ab836287159.mesh"]
+files=["res://.godot/imported/debris-spoiler-b.obj-6d706a398f40453410b71d56a260b35e.mesh"]
 
-source_file="res://kenney_car-kit/Models/OBJ format/debris-spoiler-b.obj"
-dest_files=["res://.godot/imported/debris-spoiler-b.obj-d4f99cf5fc22772a13e26ab836287159.mesh", "res://.godot/imported/debris-spoiler-b.obj-d4f99cf5fc22772a13e26ab836287159.mesh"]
+source_file="res://assets/models/OBJ format/debris-spoiler-b.obj"
+dest_files=["res://.godot/imported/debris-spoiler-b.obj-6d706a398f40453410b71d56a260b35e.mesh", "res://.godot/imported/debris-spoiler-b.obj-6d706a398f40453410b71d56a260b35e.mesh"]
 
 [params]
 

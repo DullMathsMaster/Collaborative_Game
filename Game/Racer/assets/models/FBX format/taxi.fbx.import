@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bscnol2bvb5ce"
-path="res://.godot/imported/taxi.fbx-695bae2e36da9b2d6bafc9bf1df1dbb8.scn"
+path="res://.godot/imported/taxi.fbx-51a4c8a974d9c54e14c472b099c7dc0c.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/FBX format/taxi.fbx"
-dest_files=["res://.godot/imported/taxi.fbx-695bae2e36da9b2d6bafc9bf1df1dbb8.scn"]
+source_file="res://assets/models/FBX format/taxi.fbx"
+dest_files=["res://.godot/imported/taxi.fbx-51a4c8a974d9c54e14c472b099c7dc0c.scn"]
 
 [params]
 

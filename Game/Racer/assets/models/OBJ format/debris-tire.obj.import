@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://ct3nab6x8glef"
-path="res://.godot/imported/debris-tire.obj-ca9cd38e661db17d4d978822c98839f7.mesh"
+path="res://.godot/imported/debris-tire.obj-74d2e4bf718feda64cae872be8e5b12f.mesh"
 
 [deps]
 
-files=["res://.godot/imported/debris-tire.obj-ca9cd38e661db17d4d978822c98839f7.mesh"]
+files=["res://.godot/imported/debris-tire.obj-74d2e4bf718feda64cae872be8e5b12f.mesh"]
 
-source_file="res://kenney_car-kit/Models/OBJ format/debris-tire.obj"
-dest_files=["res://.godot/imported/debris-tire.obj-ca9cd38e661db17d4d978822c98839f7.mesh", "res://.godot/imported/debris-tire.obj-ca9cd38e661db17d4d978822c98839f7.mesh"]
+source_file="res://assets/models/OBJ format/debris-tire.obj"
+dest_files=["res://.godot/imported/debris-tire.obj-74d2e4bf718feda64cae872be8e5b12f.mesh", "res://.godot/imported/debris-tire.obj-74d2e4bf718feda64cae872be8e5b12f.mesh"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dkh6vshipbbua"
-path="res://.godot/imported/wheel-racing.glb-aab89e2534c4db435c3943fed76b9005.scn"
+path="res://.godot/imported/wheel-racing.glb-27e7ea255eff5282ec1ecd6c4f7e529c.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/GLB format/wheel-racing.glb"
-dest_files=["res://.godot/imported/wheel-racing.glb-aab89e2534c4db435c3943fed76b9005.scn"]
+source_file="res://assets/models/GLB format/wheel-racing.glb"
+dest_files=["res://.godot/imported/wheel-racing.glb-27e7ea255eff5282ec1ecd6c4f7e529c.scn"]
 
 [params]
 

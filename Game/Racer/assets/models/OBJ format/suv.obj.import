@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dgxjx6l15rm4a"
-path="res://.godot/imported/suv.obj-0877be62e79ad12c6080f22ef26265d9.mesh"
+path="res://.godot/imported/suv.obj-0f0cc5e8c9445e758780d7333c4d7436.mesh"
 
 [deps]
 
-files=["res://.godot/imported/suv.obj-0877be62e79ad12c6080f22ef26265d9.mesh"]
+files=["res://.godot/imported/suv.obj-0f0cc5e8c9445e758780d7333c4d7436.mesh"]
 
-source_file="res://kenney_car-kit/Models/OBJ format/suv.obj"
-dest_files=["res://.godot/imported/suv.obj-0877be62e79ad12c6080f22ef26265d9.mesh", "res://.godot/imported/suv.obj-0877be62e79ad12c6080f22ef26265d9.mesh"]
+source_file="res://assets/models/OBJ format/suv.obj"
+dest_files=["res://.godot/imported/suv.obj-0f0cc5e8c9445e758780d7333c4d7436.mesh", "res://.godot/imported/suv.obj-0f0cc5e8c9445e758780d7333c4d7436.mesh"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://7p64qf5c0sov"
-path="res://.godot/imported/garbage-truck.obj-f01b29f46171ccd15f3e186dfa0049e3.mesh"
+path="res://.godot/imported/garbage-truck.obj-f282e1dbd6a56f4ed7d9995899e7c2a6.mesh"
 
 [deps]
 
-files=["res://.godot/imported/garbage-truck.obj-f01b29f46171ccd15f3e186dfa0049e3.mesh"]
+files=["res://.godot/imported/garbage-truck.obj-f282e1dbd6a56f4ed7d9995899e7c2a6.mesh"]
 
-source_file="res://kenney_car-kit/Models/OBJ format/garbage-truck.obj"
-dest_files=["res://.godot/imported/garbage-truck.obj-f01b29f46171ccd15f3e186dfa0049e3.mesh", "res://.godot/imported/garbage-truck.obj-f01b29f46171ccd15f3e186dfa0049e3.mesh"]
+source_file="res://assets/models/OBJ format/garbage-truck.obj"
+dest_files=["res://.godot/imported/garbage-truck.obj-f282e1dbd6a56f4ed7d9995899e7c2a6.mesh", "res://.godot/imported/garbage-truck.obj-f282e1dbd6a56f4ed7d9995899e7c2a6.mesh"]
 
 [params]
 

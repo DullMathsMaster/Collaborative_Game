@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://utu65qesn1o8"
-path="res://.godot/imported/wheel-tractor-back.fbx-615c74d8228dbbdbdcc184b4cfb32dd0.scn"
+path="res://.godot/imported/wheel-tractor-back.fbx-498a57bb24c7457dd1d86e1e76328c41.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/FBX format/wheel-tractor-back.fbx"
-dest_files=["res://.godot/imported/wheel-tractor-back.fbx-615c74d8228dbbdbdcc184b4cfb32dd0.scn"]
+source_file="res://assets/models/FBX format/wheel-tractor-back.fbx"
+dest_files=["res://.godot/imported/wheel-tractor-back.fbx-498a57bb24c7457dd1d86e1e76328c41.scn"]
 
 [params]
 

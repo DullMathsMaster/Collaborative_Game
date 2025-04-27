@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dvb7wrbi0b630"
-path="res://.godot/imported/debris-door-window.fbx-91092c6a8537fd48cb3a87cb1e09e165.scn"
+path="res://.godot/imported/debris-door-window.fbx-9e4fa79062df144879e8b9e031f96adb.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/FBX format/debris-door-window.fbx"
-dest_files=["res://.godot/imported/debris-door-window.fbx-91092c6a8537fd48cb3a87cb1e09e165.scn"]
+source_file="res://assets/models/FBX format/debris-door-window.fbx"
+dest_files=["res://.godot/imported/debris-door-window.fbx-9e4fa79062df144879e8b9e031f96adb.scn"]
 
 [params]
 

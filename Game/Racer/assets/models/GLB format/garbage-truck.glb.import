@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://byb1wgrtdj310"
-path="res://.godot/imported/garbage-truck.glb-4bd8c9cd5f53ed897d218697ce96ded2.scn"
+path="res://.godot/imported/garbage-truck.glb-397cc4e28bc6c2462ba0f8054740ec48.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/GLB format/garbage-truck.glb"
-dest_files=["res://.godot/imported/garbage-truck.glb-4bd8c9cd5f53ed897d218697ce96ded2.scn"]
+source_file="res://assets/models/GLB format/garbage-truck.glb"
+dest_files=["res://.godot/imported/garbage-truck.glb-397cc4e28bc6c2462ba0f8054740ec48.scn"]
 
 [params]
 

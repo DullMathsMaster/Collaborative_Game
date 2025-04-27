@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bxbqm8pb2rjaf"
-path="res://.godot/imported/debris-plate-small-b.glb-4aad03502d17b9567bdb8711af9af3dd.scn"
+path="res://.godot/imported/debris-plate-small-b.glb-10e9e4e4f67f454577803f2132e099d0.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/GLB format/debris-plate-small-b.glb"
-dest_files=["res://.godot/imported/debris-plate-small-b.glb-4aad03502d17b9567bdb8711af9af3dd.scn"]
+source_file="res://assets/models/GLB format/debris-plate-small-b.glb"
+dest_files=["res://.godot/imported/debris-plate-small-b.glb-10e9e4e4f67f454577803f2132e099d0.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bmklt2gc5d2df"
-path="res://.godot/imported/wheel-racing.fbx-f8da453be2a8e5cc871fdd2caae61d4b.scn"
+path="res://.godot/imported/wheel-racing.fbx-5b7cb6dca5926096ea3da6bb7f1c1771.scn"
 
 [deps]
 
-source_file="res://kenney_car-kit/Models/FBX format/wheel-racing.fbx"
-dest_files=["res://.godot/imported/wheel-racing.fbx-f8da453be2a8e5cc871fdd2caae61d4b.scn"]
+source_file="res://assets/models/FBX format/wheel-racing.fbx"
+dest_files=["res://.godot/imported/wheel-racing.fbx-5b7cb6dca5926096ea3da6bb7f1c1771.scn"]
 
 [params]
 

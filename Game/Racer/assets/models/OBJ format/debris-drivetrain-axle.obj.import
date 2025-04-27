@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://6e6asyxfskni"
-path="res://.godot/imported/debris-drivetrain-axle.obj-6a7dcd035ed6f14e373428fee73201a3.mesh"
+path="res://.godot/imported/debris-drivetrain-axle.obj-f600cc13e021affe49e78134d575a150.mesh"
 
 [deps]
 
-files=["res://.godot/imported/debris-drivetrain-axle.obj-6a7dcd035ed6f14e373428fee73201a3.mesh"]
+files=["res://.godot/imported/debris-drivetrain-axle.obj-f600cc13e021affe49e78134d575a150.mesh"]
 
-source_file="res://kenney_car-kit/Models/OBJ format/debris-drivetrain-axle.obj"
-dest_files=["res://.godot/imported/debris-drivetrain-axle.obj-6a7dcd035ed6f14e373428fee73201a3.mesh", "res://.godot/imported/debris-drivetrain-axle.obj-6a7dcd035ed6f14e373428fee73201a3.mesh"]
+source_file="res://assets/models/OBJ format/debris-drivetrain-axle.obj"
+dest_files=["res://.godot/imported/debris-drivetrain-axle.obj-f600cc13e021affe49e78134d575a150.mesh", "res://.godot/imported/debris-drivetrain-axle.obj-f600cc13e021affe49e78134d575a150.mesh"]
 
 [params]
 
