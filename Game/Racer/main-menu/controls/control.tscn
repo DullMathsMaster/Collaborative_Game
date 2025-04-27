@@ -1,16 +1,16 @@
 [gd_scene load_steps=12 format=3 uid="uid://befmqumpcxyb6"]
 
-[ext_resource type="Texture2D" uid="uid://by7ay3cogt6ly" path="res://assets/images/control-icons/keyboard_w.svg" id="1_0ytqx"]
-[ext_resource type="Texture2D" uid="uid://bt8ru7av6gad3" path="res://assets/images/control-icons/keyboard_q.svg" id="1_62e2m"]
-[ext_resource type="Script" uid="uid://fyglrk0ohdw7" path="res://main-menu/controls/control.gd" id="1_pxugv"]
-[ext_resource type="Texture2D" uid="uid://boekie152a2j6" path="res://assets/images/control-icons/keyboard_a.svg" id="2_pxugv"]
-[ext_resource type="Texture2D" uid="uid://dpev8ilb6rnho" path="res://assets/images/control-icons/keyboard_shift.svg" id="2_qtu10"]
-[ext_resource type="Texture2D" uid="uid://datvqd7uh21jt" path="res://assets/images/control-icons/keyboard_s.svg" id="3_eh0v1"]
-[ext_resource type="Texture2D" uid="uid://b5txqgqg6v5if" path="res://assets/images/control-icons/keyboard_d.svg" id="4_am1vj"]
-[ext_resource type="Texture2D" uid="uid://edu1q4adco2b" path="res://assets/images/control-icons/keyboard_arrow_up.svg" id="6_g31lc"]
-[ext_resource type="Texture2D" uid="uid://btlodsw7pgsew" path="res://assets/images/control-icons/keyboard_arrow_left.svg" id="7_knq72"]
-[ext_resource type="Texture2D" uid="uid://b0tx2xvsavqss" path="res://assets/images/control-icons/keyboard_arrow_down.svg" id="8_xvdhi"]
-[ext_resource type="Texture2D" uid="uid://c08k50u1pwlq2" path="res://assets/images/control-icons/keyboard_arrow_right.svg" id="9_oq4si"]
+[ext_resource type="Texture2D" uid="uid://di5f48lit7lee" path="res://assets/images/control-icons/keyboard_w.svg" id="1_0ytqx"]
+[ext_resource type="Texture2D" uid="uid://dkaiu1a3xc63r" path="res://assets/images/control-icons/keyboard_q.svg" id="1_62e2m"]
+[ext_resource type="Script" uid="uid://cg51qfmfkt8wf" path="res://main-menu/controls/control.gd" id="1_pxugv"]
+[ext_resource type="Texture2D" uid="uid://cjf7j70tx7rys" path="res://assets/images/control-icons/keyboard_a.svg" id="2_pxugv"]
+[ext_resource type="Texture2D" uid="uid://d2v7a70q341c2" path="res://assets/images/control-icons/keyboard_shift.svg" id="2_qtu10"]
+[ext_resource type="Texture2D" uid="uid://bxva0h1vii562" path="res://assets/images/control-icons/keyboard_s.svg" id="3_eh0v1"]
+[ext_resource type="Texture2D" uid="uid://cpaxof2ho5iyf" path="res://assets/images/control-icons/keyboard_d.svg" id="4_am1vj"]
+[ext_resource type="Texture2D" uid="uid://ogf28wr7sj67" path="res://assets/images/control-icons/keyboard_arrow_up.svg" id="6_g31lc"]
+[ext_resource type="Texture2D" uid="uid://x0gng3n5612y" path="res://assets/images/control-icons/keyboard_arrow_left.svg" id="7_knq72"]
+[ext_resource type="Texture2D" uid="uid://cifesoavlka1t" path="res://assets/images/control-icons/keyboard_arrow_down.svg" id="8_xvdhi"]
+[ext_resource type="Texture2D" uid="uid://fbcvr2ybd53q" path="res://assets/images/control-icons/keyboard_arrow_right.svg" id="9_oq4si"]
 
 [node name="Control-Menu" type="Control"]
 layout_mode = 3
@@ -67,7 +67,7 @@ alignment = 1
 [node name="Player-1-Controls" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/Player-1-Controls"]
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/HBoxContainer/Player-1-Controls"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Player 1"
@@ -76,21 +76,21 @@ horizontal_alignment = 1
 [node name="Player-1-Move" type="HBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/Player-1-Controls"]
 layout_mode = 2
 
-[node name="W-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-1-Controls/Player-1-Move"]
+[node name="Up-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-1-Controls/Player-1-Move"]
 layout_mode = 2
-texture = ExtResource("1_0ytqx")
+texture = ExtResource("6_g31lc")
 
-[node name="A-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-1-Controls/Player-1-Move"]
+[node name="Left-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-1-Controls/Player-1-Move"]
 layout_mode = 2
-texture = ExtResource("2_pxugv")
+texture = ExtResource("7_knq72")
 
-[node name="S-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-1-Controls/Player-1-Move"]
+[node name="Down-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-1-Controls/Player-1-Move"]
 layout_mode = 2
-texture = ExtResource("3_eh0v1")
+texture = ExtResource("8_xvdhi")
 
-[node name="D-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-1-Controls/Player-1-Move"]
+[node name="Right-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-1-Controls/Player-1-Move"]
 layout_mode = 2
-texture = ExtResource("4_am1vj")
+texture = ExtResource("9_oq4si")
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/Player-1-Controls/Player-1-Move"]
 layout_mode = 2
@@ -102,7 +102,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-1-Controls/Player-1-Boost"]
 layout_mode = 2
-texture = ExtResource("1_62e2m")
+texture = ExtResource("2_qtu10")
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/Player-1-Controls/Player-1-Boost"]
 layout_mode = 2
@@ -112,7 +112,7 @@ text = "Boost"
 [node name="Player-2-Controls" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls"]
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Player 2"
@@ -121,35 +121,35 @@ horizontal_alignment = 1
 [node name="Player-2-Move" type="HBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls"]
 layout_mode = 2
 
-[node name="Up-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls/Player-2-Move"]
+[node name="W-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls/Player-2-Move"]
 layout_mode = 2
-texture = ExtResource("6_g31lc")
+texture = ExtResource("1_0ytqx")
 
-[node name="Left-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls/Player-2-Move"]
+[node name="A-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls/Player-2-Move"]
 layout_mode = 2
-texture = ExtResource("7_knq72")
+texture = ExtResource("2_pxugv")
 
-[node name="Down-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls/Player-2-Move"]
+[node name="S-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls/Player-2-Move"]
 layout_mode = 2
-texture = ExtResource("8_xvdhi")
+texture = ExtResource("3_eh0v1")
 
-[node name="Right-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls/Player-2-Move"]
+[node name="D-Texture" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls/Player-2-Move"]
 layout_mode = 2
-texture = ExtResource("9_oq4si")
+texture = ExtResource("4_am1vj")
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls/Player-2-Move"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Move"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls"]
+[node name="Player-2-Boost" type="HBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls/HBoxContainer2"]
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls/Player-2-Boost"]
 layout_mode = 2
-texture = ExtResource("2_qtu10")
+texture = ExtResource("1_62e2m")
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls/HBoxContainer2"]
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/Player-2-Controls/Player-2-Boost"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Boost"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dftlmohchf5xe"]
 
-[ext_resource type="Script" uid="uid://cxm43255pvws0" path="res://game/test-files/new_player.gd" id="1_kvd2m"]
+[ext_resource type="Script" uid="uid://byolymg3pc67k" path="res://game/test-files/new_player.gd" id="1_kvd2m"]
 [ext_resource type="ArrayMesh" uid="uid://u8b3f1hc3qey" path="res://kenney_car-kit/Models/OBJ format/sedan-sports.obj" id="2_kvd2m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f3sb7"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0x4fvctqrcix" path="res://game/second-track/second_track.gd" id="1_gb1yd"]
 [ext_resource type="ArrayMesh" uid="uid://ccuthpw31mcyn" path="res://game/second-track/Secondtrack/Secondtrack.obj" id="2_gb1yd"]
-[ext_resource type="ArrayMesh" uid="uid://u8b3f1hc3qey" path="res://kenney_car-kit/Models/OBJ format/sedan-sports.obj" id="2_ig56e"]
+[ext_resource type="ArrayMesh" uid="uid://u8b3f1hc3qey" path="res://assets/models/OBJ format/sedan-sports.obj" id="2_ig56e"]
 [ext_resource type="ArrayMesh" uid="uid://cao8teiy6mfp8" path="res://game/second-track/Tree/Tree.obj" id="3_ig56e"]
 [ext_resource type="ArrayMesh" uid="uid://c08cveuxfi26p" path="res://game/second-track/Rock/Rock.obj" id="4_occ6e"]
 [ext_resource type="Script" uid="uid://cxm43255pvws0" path="res://game/test-files/new_player.gd" id="5_gb1yd"]
