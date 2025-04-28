@@ -6,7 +6,7 @@ extends Control
 @onready var car = get_node("/root/Second-track/CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer/SubViewport/Player")
 
 
-func _input(event):
+func _input(event):465
 	if event is InputEventMouseButton && event.button_index == 1 && event.is_pressed():
 		var track_node = _get_track_node()
 		

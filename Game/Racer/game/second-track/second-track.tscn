@@ -614,7 +614,6 @@ size = Vector2i(574, 608)
 render_target_update_mode = 4
 
 [node name="Player" type="CharacterBody3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer/SubViewport"]
-unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.52407, -0.36363, 24.8565)
 script = ExtResource("5_gb1yd")
 
