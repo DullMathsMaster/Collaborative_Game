@@ -1,7 +1,7 @@
 extends Node3D
 
 # define constants for accessing checkpoint and red dot in map
-@onready var checkpoint = $CanvasLayer/MenuSpace/SubViewportContainer/SubViewport/Checkpoint
+@onready var checkpoint = $Checkpoint
 @onready var close_but = $CanvasLayer/UI/NavBar/Button
 
 
@@ -19,7 +19,7 @@ var scores = []
 # When the game is initialised, load the leaderboard file into scores and update the leaderboard text
 func _ready() -> void:
 	# Load the leaderboard into the screen
-	UiLoader.load_into_men_space("res://main-menu/winner/winner.tscn")
+	#UiLoader.load_into_men_space("res://main-menu/winner/winner.tscn")
 	close_but.visible = true
 	
 	# Open the file, and read it
@@ -43,7 +43,7 @@ func _ready() -> void:
 	# Change the text inside the leaderboard
 	for i in range(0, 5):	
 		label_write += str(i + 1) + ": " + str(scores[i][1]) + "\n"
-	$CanvasLayer/MenuSpace/Control/Top_Scores.text = label_write
+	#$CanvasLayer/MenuSpace/Control/Top_Scores.text = label_write
 
 func _notification(what: int) -> void:
 	# When the game is closed, save the scores back to the leaderboard

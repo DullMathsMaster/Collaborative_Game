@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ch10b62hts3s2"]
 
-[ext_resource type="Texture2D" uid="uid://cargjeytewppn" path="res://assets/images/control-icons/keyboard_4_outline.svg" id="1_l5ahg"]
+[ext_resource type="Texture2D" uid="uid://bvb3y87mkt5j" path="res://assets/images/control-icons/keyboard_4_outline.svg" id="1_l5ahg"]
 
 [node name="Track-4" type="Panel"]
 
