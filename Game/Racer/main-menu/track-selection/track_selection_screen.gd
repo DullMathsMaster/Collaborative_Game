@@ -3,7 +3,7 @@ extends Control
 
 @onready var track_selection_box = $Panel/VBoxContainer/HBoxContainer
 @onready var close_but = get_node("/root/Second-track/CanvasLayer/UI/NavBar/Button") 
-@onready var car = get_node("/root/Second-track/CanvasLayer/MenuSpace/SubViewportContainer/SubViewport/Player")
+@onready var car = get_node("/root/Second-track/CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer/SubViewport/Player")
 
 
 func _input(event):

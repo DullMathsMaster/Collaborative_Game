@@ -20,6 +20,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 custom_minimum_size = Vector2(100, 100)
@@ -60,6 +62,8 @@ track_texture = ExtResource("5_t3hjs")
 
 [node name="Start-Button" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Start"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "START"
 
 [connection signal="pressed" from="Panel/VBoxContainer/Start-Button" to="." method="_on_start_button_pressed"]
