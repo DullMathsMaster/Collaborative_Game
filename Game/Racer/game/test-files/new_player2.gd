@@ -70,3 +70,7 @@ func _physics_process(delta: float) -> void:
 	var target_angle := Vector3.BACK.signed_angle_to(_last_movement_direction, Vector3.UP)
 	_skin.global_rotation.y = lerp_angle(_skin.rotation.y, target_angle, handling * delta)
 	_hitbox.global_rotation.y = lerp_angle(_hitbox.rotation.y, target_angle, handling * delta)
+
+
+func _on_control_gui_input(event: InputEvent) -> void:
+	pass # Replace with function body.
