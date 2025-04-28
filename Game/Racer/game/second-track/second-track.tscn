@@ -1,17 +1,17 @@
 [gd_scene load_steps=48 format=3 uid="uid://7svo2702rp0y"]
 
-[ext_resource type="Script" uid="uid://bde7p51ki0yhp" path="res://game/second-track/second_track.gd" id="1_gb1yd"]
+[ext_resource type="Script" uid="uid://d0x4fvctqrcix" path="res://game/second-track/second_track.gd" id="1_gb1yd"]
 [ext_resource type="ArrayMesh" uid="uid://ccuthpw31mcyn" path="res://game/second-track/Secondtrack/Secondtrack.obj" id="2_gb1yd"]
 [ext_resource type="ArrayMesh" uid="uid://u8b3f1hc3qey" path="res://kenney_car-kit/Models/OBJ format/sedan-sports.obj" id="2_ig56e"]
 [ext_resource type="ArrayMesh" uid="uid://cao8teiy6mfp8" path="res://game/second-track/Tree/Tree.obj" id="3_ig56e"]
 [ext_resource type="ArrayMesh" uid="uid://c08cveuxfi26p" path="res://game/second-track/Rock/Rock.obj" id="4_occ6e"]
-[ext_resource type="Script" uid="uid://dlp6f3too1say" path="res://game/test-files/new_player.gd" id="5_gb1yd"]
+[ext_resource type="Script" uid="uid://cxm43255pvws0" path="res://game/test-files/new_player.gd" id="5_gb1yd"]
 [ext_resource type="ArrayMesh" uid="uid://c002c81mwudm0" path="res://game/second-track/Cone/Cone.obj" id="5_qjjby"]
-[ext_resource type="Texture2D" uid="uid://boxanntgd27fn" path="res://game/second-track/Screenshot 2025-04-17 223841.png" id="7_ig56e"]
-[ext_resource type="Script" uid="uid://dti0v26kmljxl" path="res://game/second-track/nav_bar.gd" id="7_occ6e"]
+[ext_resource type="Texture2D" uid="uid://blwhr8kquqlfx" path="res://game/second-track/Screenshot 2025-04-17 223841.png" id="7_ig56e"]
+[ext_resource type="Script" uid="uid://di3m18035dyj1" path="res://game/second-track/nav_bar.gd" id="7_occ6e"]
 [ext_resource type="ArrayMesh" uid="uid://cnwjuvojonwas" path="res://game/second-track/Finish Line/Finish Line.obj" id="7_soe5c"]
 [ext_resource type="ArrayMesh" uid="uid://cwuj22jax3uya" path="res://game/second-track/Finish Line Words/Part Studio 1.obj" id="8_6ng4d"]
-[ext_resource type="Script" path="res://game/test-files/new_player2.gd" id="11_old6m"]
+[ext_resource type="Script" uid="uid://caonljctffrkj" path="res://game/test-files/new_player2.gd" id="11_old6m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_soe5c"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -109,8 +109,6 @@ viewport_path = NodePath("SubViewport")
 
 [sub_resource type="GDScript" id="GDScript_qjjby"]
 script/source = "extends MenuButton
-
-
 "
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h12lf"]
