@@ -16,7 +16,7 @@ var _gravity := -30.0
 @onready var _camera: Camera3D = %Camera3D2
 @onready var _skin: MeshInstance3D = %Sedan2
 @onready var _hitbox: CollisionShape3D = %Hitbox2
-@onready var point = get_node("../../../../../Map/ColorRect2")
+@onready var point = get_node("../../../../Map/ColorRect2")
 
 
 #func _input(event: InputEvent) -> void:
