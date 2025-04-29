@@ -264,6 +264,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_7v1jw")
 [node name="Racer-Selection-Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
 text = "SELECT RACER"
 
 [node name="Selection-Marker" type="Control" parent="."]
