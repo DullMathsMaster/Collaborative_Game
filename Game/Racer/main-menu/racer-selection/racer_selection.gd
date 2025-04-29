@@ -2,12 +2,17 @@ extends Control
 
 @onready var object_container: HBoxContainer = %ObjectContainer
 @onready var scroll_container: ScrollContainer = %ScrollContainer
+@onready var player_label: Label = $"PanelContainer/MarginContainer/VBoxContainer/Player-Label"
 
 
 var target_scroll = 0
 
 
 func _ready() -> void:
+	if GlobalData.two_player and GlobalData.player_one_car != -1:
+		player_label.text = "PLAYER 2"
+	else:
+		player_label.text = "PLAYER 1"
 	_set_selection()
 
 

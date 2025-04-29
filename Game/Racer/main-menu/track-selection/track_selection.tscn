@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwlapttdrc001"]
+[gd_scene load_steps=5 format=3 uid="uid://bwlapttdrc001"]
 
 [ext_resource type="Script" uid="uid://s4seaer63jxo" path="res://main-menu/track-selection/track_selection_screen.gd" id="1_p0rn4"]
-[ext_resource type="PackedScene" uid="uid://bks0xxj6rei6g" path="res://main-menu/track-selection/track_slot.tscn" id="2_8lahe"]
-[ext_resource type="Texture2D" uid="uid://dusxoe5o0tjaj" path="res://assets/images/control-icons/keyboard_1_outline.svg" id="3_p0rn4"]
-[ext_resource type="Texture2D" uid="uid://ckphwgql8n2uc" path="res://assets/images/control-icons/keyboard_2_outline.svg" id="4_7jkx5"]
-[ext_resource type="Texture2D" uid="uid://c0ngcgweku6ja" path="res://assets/images/control-icons/keyboard_3_outline.svg" id="5_t3hjs"]
+[ext_resource type="Texture2D" uid="uid://c51ue1x508tdq" path="res://assets/images/model-previews/ambulance.png" id="2_1nfrp"]
+[ext_resource type="Texture2D" uid="uid://biyecnchsx7e7" path="res://game/second-track/Screenshot 2025-04-17 223841.png" id="3_p0rn4"]
+[ext_resource type="Texture2D" uid="uid://bwva5ko25qt6y" path="res://assets/images/model-previews/firetruck.png" id="4_7jkx5"]
 
 [node name="Track-Selection" type="Control"]
 layout_mode = 3
@@ -20,6 +19,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 custom_minimum_size = Vector2(100, 100)
@@ -29,37 +30,69 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 150
+theme_override_constants/separation = 50
 alignment = 1
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Choose a Track"
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+text = "Start the Race"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-theme_override_constants/separation = 300
+theme_override_constants/separation = 50
 alignment = 1
 
-[node name="Track-1" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("2_8lahe")]
+[node name="Player-1" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-track_path = "res://main-menu/title-screen/title_screen.tscn"
-track_texture = ExtResource("3_p0rn4")
 
-[node name="Track-2" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("2_8lahe")]
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/Player-1"]
 layout_mode = 2
-track_path = "res://main-menu/title-screen/title_screen.tscn"
-track_texture = ExtResource("4_7jkx5")
+theme_override_font_sizes/font_size = 20
+text = "Player 1"
 
-[node name="Track-3" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("2_8lahe")]
+[node name="Player-1-Car" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-1"]
 layout_mode = 2
-track_path = "res://main-menu/title-screen/title_screen.tscn"
-track_texture = ExtResource("5_t3hjs")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_1nfrp")
+flip_h = true
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "Track"
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("3_p0rn4")
+
+[node name="Player-2" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/Player-2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Player 2"
+
+[node name="Player-2-Car" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/Player-2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_7jkx5")
 
 [node name="Start-Button" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Start"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 20
+text = "START"
 
 [connection signal="pressed" from="Panel/VBoxContainer/Start-Button" to="." method="_on_start_button_pressed"]
