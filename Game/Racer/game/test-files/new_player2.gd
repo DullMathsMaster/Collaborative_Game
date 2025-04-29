@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @export_group("Camera")
-#@export_range(0.0, 1.0) var mouse_sensitivity := 0.25
+@export_range(0.0, 1.0) var mouse_sensitivity := 3.0
 
 @export_group("Movement")
 @export var move_speed := 20.0
@@ -16,7 +16,7 @@ var _gravity := -30.0
 @onready var _camera: Camera3D = %Camera3D2
 @onready var _skin: MeshInstance3D = %Sedan2
 @onready var _hitbox: CollisionShape3D = %Hitbox2
-@onready var point = get_node("../../../../../Map/ColorRect2")
+@onready var point = get_node("../../../../Map/ColorRect2")
 
 
 #func _input(event: InputEvent) -> void:
@@ -28,17 +28,17 @@ var _gravity := -30.0
 #
 #func _unhandled_input(event: InputEvent) -> void:
 	#var is_camera_motion := (
-		#event is InputEventMouseMotion and
+		#event is InputEventJoypadMotion# and
 		#Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
 	#)
 	#if is_camera_motion:
-		#_camera_input_direction = event.screen_relative * mouse_sensitivity
+		#_camera_input_direction = Input.get_vector("camera_left", "camera_right", "camera_up", "camera_down") * mouse_sensitivity
 		
 		
 func _physics_process(delta: float) -> void:
-	_camera_pivot.rotation.x += _camera_input_direction.y * delta
+	_camera_pivot.rotation.x += Input.get_axis("camera_up", "camera_down") * delta * mouse_sensitivity
 	_camera_pivot.rotation.x = clamp(_camera_pivot.rotation.x, -PI / 6.0, PI / 3.0)
-	_camera_pivot.rotation.y -= _camera_input_direction.x * delta
+	_camera_pivot.rotation.y -= Input.get_axis("camera_left", "camera_right") * delta * mouse_sensitivity
 	
 	_camera_input_direction = Vector2.ZERO
 	

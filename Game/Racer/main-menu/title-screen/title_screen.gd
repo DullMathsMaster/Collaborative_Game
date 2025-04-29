@@ -1,7 +1,7 @@
 extends Control
 
 @onready var close_but = get_node("/root/Second-track/CanvasLayer/UI/NavBar/Button") 
-@onready var car = get_node("/root/Second-track/CanvasLayer/MenuSpace/SubViewportContainer/SubViewport/Player")
+@onready var car = get_node("/root/Second-track/CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player")
 
 
 func _ready() -> void:

@@ -23,7 +23,7 @@ func _physics_process(delta):
 	var input_vector = Vector3.ZERO
 	var is_colliding = false
 	
-	# Turning left and rigjt
+	# Turning left and right
 	input_vector.z -= 1
 	if Input.is_action_pressed("ui_right"):
 		rotate_y(-1 * SENSITIVITY)
