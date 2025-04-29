@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @export_group("Camera")
-@export_range(0.0, 1.0) var mouse_sensitivity := 2.0
+@export_range(0.0, 1.0) var mouse_sensitivity := 3.0
 
 @export_group("Movement")
 @export var move_speed := 20.0
@@ -16,7 +16,7 @@ var _gravity := -30.0
 @onready var _camera: Camera3D = %Camera3D2
 @onready var _skin: MeshInstance3D = %Sedan2
 @onready var _hitbox: CollisionShape3D = %Hitbox2
-@onready var point = get_node("../../../../../Map/ColorRect2")
+@onready var point = get_node("../../../../Map/ColorRect2")
 
 
 #func _input(event: InputEvent) -> void:

@@ -5,6 +5,10 @@ var game_track_path: String
 var number_of_laps = 0
 var player_one_car = -1 # The index of the car in `car_paths`
 var player_two_car = -1 # `-1` means none selected
+var p1_finish = false
+var p2_finish = false
+
+
 
 var car_path_header = "assets/models/OBJ format/" # The directory the models are stored in
 var car_file_types = ".obj" # The file extension for the car models

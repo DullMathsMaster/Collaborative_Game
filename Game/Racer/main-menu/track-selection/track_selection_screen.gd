@@ -3,10 +3,10 @@ extends Control
 
 @onready var track_selection_box = $Panel/VBoxContainer/HBoxContainer
 @onready var close_but = get_node("/root/Second-track/CanvasLayer/UI/NavBar/Button") 
-@onready var car = get_node("/root/Second-track/CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer/SubViewport/Player")
+@onready var car = get_node("/root/Second-track/CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player")
 
 
-func _input(event):465
+func _input(event):
 	if event is InputEventMouseButton && event.button_index == 1 && event.is_pressed():
 		var track_node = _get_track_node()
 		

@@ -11,7 +11,7 @@ var elapsed = Time.get_ticks_msec()
 func load_into_men_space(scene_path) -> void:
 	# Clear the panel first
 	for child in menuspace.get_children():
-		if child.name != "SubViewportContainer":
+		if child.name != "SubViewportContainer3" and child.name != "SubViewportContainer2":
 			child.queue_free()
 	
 	# If close buton pressed, stop here

@@ -520,6 +520,7 @@ skeleton = NodePath("../..")
 transform = Transform3D(0.271954, 0, 0.126653, 0, 0.3, 0, -0.126653, 0, 0.271954, 0, 1.667, 22.333)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Checkpoint"]
+layers = 2
 material_override = SubResource("StandardMaterial3D_j8ggn")
 transparency = 0.35
 mesh = SubResource("BoxMesh_gb1yd")
@@ -528,6 +529,24 @@ mesh = SubResource("BoxMesh_gb1yd")
 shape = SubResource("ConcavePolygonShape3D_j8ggn")
 
 [node name="Sprite3D" type="Sprite3D" parent="Checkpoint"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+transparency = 1.0
+texture = SubResource("ViewportTexture_gb1yd")
+
+[node name="Checkpoint2" type="Area3D" parent="."]
+transform = Transform3D(0.271954, 0, 0.126653, 0, 0.3, 0, -0.126653, 0, 0.271954, 0, 1.667, 22.333)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Checkpoint2"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_j8ggn")
+transparency = 0.35
+mesh = SubResource("BoxMesh_gb1yd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Checkpoint2"]
+shape = SubResource("ConcavePolygonShape3D_j8ggn")
+
+[node name="Sprite3D" type="Sprite3D" parent="Checkpoint2"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 transparency = 1.0
 texture = SubResource("ViewportTexture_gb1yd")
@@ -593,104 +612,132 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 
-[node name="SubViewportContainer" type="GridContainer" parent="CanvasLayer/MenuSpace"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-columns = 2
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer/MenuSpace/SubViewportContainer"]
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="CanvasLayer/MenuSpace"]
 layout_mode = 2
+offset_right = 590.0
+offset_bottom = 608.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/MenuSpace/SubViewportContainer2"]
 handle_input_locally = false
-size = Vector2i(574, 608)
+size = Vector2i(590, 608)
 render_target_update_mode = 4
 
-[node name="Player" type="CharacterBody3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer/SubViewport"]
+[node name="Time" type="Label" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport"]
+anchors_preset = -1
+anchor_left = 0.795
+anchor_top = 0.054
+anchor_right = 0.925
+anchor_bottom = 0.123
+offset_left = -0.0500183
+offset_top = 0.167999
+offset_right = 0.249939
+offset_bottom = 0.215996
+theme_override_font_sizes/font_size = 30
+text = "00:00"
+
+[node name="Player" type="CharacterBody3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport"]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.52407, -0.36363, 24.8565)
 script = ExtResource("5_gb1yd")
 
-[node name="Area3D" type="Area3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer/SubViewport/Player"]
+[node name="Area3D" type="Area3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.535499, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer/SubViewport/Player/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player/Area3D"]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0.272911, 0)
 shape = SubResource("BoxShape3D_h12lf")
 
-[node name="Sedan" type="MeshInstance3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer/SubViewport/Player"]
+[node name="Sedan" type="MeshInstance3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500002, 0)
 mesh = ExtResource("2_ig56e")
-skeleton = NodePath("../../../../../../..")
+skeleton = NodePath("../../../../../..")
 
-[node name="Hitbox" type="CollisionShape3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer/SubViewport/Player"]
+[node name="Hitbox" type="CollisionShape3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player"]
 unique_name_in_owner = true
 transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, -1.5, 0, 1.5, -6.55671e-08, 0, 1.21137, 0)
 shape = SubResource("CapsuleShape3D_ig56e")
 
-[node name="CameraPivot" type="Node3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer/SubViewport/Player"]
+[node name="CameraPivot" type="Node3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.963537, -0.267575, 0, 0.267575, 0.963537, 0, 1.46449, -1.77636e-15)
 
-[node name="SpringArm3D" type="SpringArm3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer/SubViewport/Player/CameraPivot"]
+[node name="SpringArm3D" type="SpringArm3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player/CameraPivot"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 shape = SubResource("SphereShape3D_occ6e")
 spring_length = 4.0
 
-[node name="Camera3D" type="Camera3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer/SubViewport/Player/CameraPivot/SpringArm3D"]
+[node name="Camera3D" type="Camera3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player/CameraPivot/SpringArm3D"]
 unique_name_in_owner = true
+cull_mask = 1048571
 
-[node name="SubViewportContainer2" type="SubViewportContainer" parent="CanvasLayer/MenuSpace/SubViewportContainer"]
+[node name="SubViewportContainer3" type="SubViewportContainer" parent="CanvasLayer/MenuSpace"]
 layout_mode = 2
+anchor_left = 0.511
+anchor_right = 0.999
+anchor_bottom = 1.0
+offset_left = 1.32794
+offset_right = 0.151855
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer2"]
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/MenuSpace/SubViewportContainer3"]
 handle_input_locally = false
-size = Vector2i(574, 608)
+size = Vector2i(560, 608)
 render_target_update_mode = 4
 
-[node name="Player2" type="CharacterBody3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer2/SubViewport"]
+[node name="Time2" type="Label" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport"]
+visibility_layer = 4
+anchors_preset = -1
+anchor_left = 0.878
+anchor_top = 0.108
+anchor_right = 0.964
+anchor_bottom = 0.199
+offset_left = -37.558
+offset_top = -32.664
+offset_right = -8.80402
+offset_bottom = -45.992
+theme_override_font_sizes/font_size = 30
+text = "00:00"
+
+[node name="Player2" type="CharacterBody3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.52407, -0.36363, 21.1928)
 script = ExtResource("11_old6m")
 
-[node name="Area3D" type="Area3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer2/SubViewport/Player2"]
+[node name="Area3D" type="Area3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Player2"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.535499, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer2/SubViewport/Player2/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Player2/Area3D"]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0.272911, 0)
 shape = SubResource("BoxShape3D_h12lf")
 
-[node name="Sedan2" type="MeshInstance3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer2/SubViewport/Player2"]
+[node name="Sedan2" type="MeshInstance3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Player2"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500002, 0)
 mesh = ExtResource("2_ig56e")
-skeleton = NodePath("../../../../../../..")
+skeleton = NodePath("../../../../../..")
 
-[node name="Hitbox2" type="CollisionShape3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer2/SubViewport/Player2"]
+[node name="Hitbox2" type="CollisionShape3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Player2"]
 unique_name_in_owner = true
 transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, -1.5, 0, 1.5, -6.55671e-08, 0, 1.21137, 0)
 shape = SubResource("CapsuleShape3D_ig56e")
 
-[node name="CameraPivot2" type="Node3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer2/SubViewport/Player2"]
+[node name="CameraPivot2" type="Node3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Player2"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.963537, -0.267575, 0, 0.267575, 0.963537, 0, 1.46449, -1.77636e-15)
 
-[node name="SpringArm3D" type="SpringArm3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer2/SubViewport/Player2/CameraPivot2"]
+[node name="SpringArm3D" type="SpringArm3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Player2/CameraPivot2"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 shape = SubResource("SphereShape3D_occ6e")
 spring_length = 4.0
 
-[node name="Camera3D2" type="Camera3D" parent="CanvasLayer/MenuSpace/SubViewportContainer/SubViewportContainer2/SubViewport/Player2/CameraPivot2/SpringArm3D"]
+[node name="Camera3D2" type="Camera3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Player2/CameraPivot2/SpringArm3D"]
 unique_name_in_owner = true
+cull_mask = 1048573
 
 [node name="Map" type="Panel" parent="CanvasLayer"]
 visibility_layer = 3
@@ -733,20 +780,7 @@ offset_right = -181.0
 offset_bottom = -184.0
 color = Color(0.191791, 0, 0.984342, 1)
 
-[node name="Time" type="Label" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_left = 0.878
-anchor_top = 0.108
-anchor_right = 0.964
-anchor_bottom = 0.199
-offset_left = 0.543945
-offset_top = 0.0159988
-offset_right = -0.528076
-offset_bottom = 0.0479889
-theme_override_font_sizes/font_size = 30
-text = "00:00"
-
 [connection signal="area_exited" from="Checkpoint" to="." method="_on_checkpoint_area_exited"]
-[connection signal="body_exited" from="Checkpoint" to="." method="_on_checkpoint_body_exited"]
+[connection signal="area_exited" from="Checkpoint2" to="." method="_on_checkpoint_2_area_exited"]
 [connection signal="toggled" from="CanvasLayer/UI/NavBar/MapButton" to="CanvasLayer/UI/NavBar" method="_on_map_button_toggled"]
 [connection signal="pressed" from="CanvasLayer/UI/NavBar/Button" to="CanvasLayer/UI/NavBar" method="_on_button_pressed"]
