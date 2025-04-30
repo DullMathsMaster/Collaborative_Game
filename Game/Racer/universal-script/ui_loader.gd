@@ -11,9 +11,19 @@ var elapsed = Time.get_ticks_msec()
 func load_into_men_space(scene_path) -> void:
 	# Clear the panel first
 	for child in menuspace.get_children():
-		if child.name != "SubViewportContainer3" and child.name != "SubViewportContainer2":
+		if (child.name == "SubViewportContainer3" or child.name == "SubViewportContainer2") and GlobalData.two_player: 
+			pass
+		elif child.name == "SubViewportContainer" and not GlobalData.two_player:
+			pass
+		else:
 			child.queue_free()
 	
+	if scene_path == "clear all":
+		print("everything is cleared")
+		for child in menuspace.get_children():
+			child.queue_free()
+		return
+		
 	# If close buton pressed, stop here
 	if scene_path == "null":
 		return
@@ -22,3 +32,4 @@ func load_into_men_space(scene_path) -> void:
 	var scene = load(scene_path)
 	var instance = scene.instantiate()
 	menuspace.add_child(instance)
+	await instance.ready

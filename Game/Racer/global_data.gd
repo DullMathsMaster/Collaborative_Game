@@ -1,6 +1,6 @@
 extends Node
 
-var two_player: bool
+var two_player = true
 var game_track_path: String
 var number_of_laps = 0
 var player_one_car = -1 # The index of the car in `car_names
@@ -9,6 +9,7 @@ var p1_finish = false
 var p2_finish = false
 
 
+var mode = ["", ]
 
 var car_path_header = "res://assets/models/OBJ format/" # The directory the models are stored in
 var car_file_type = ".obj" # The file extension for the car models
