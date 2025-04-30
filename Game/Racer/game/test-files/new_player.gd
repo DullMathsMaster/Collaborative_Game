@@ -70,3 +70,13 @@ func _physics_process(delta: float) -> void:
 	var target_angle := Vector3.BACK.signed_angle_to(_last_movement_direction, Vector3.UP)
 	_skin.global_rotation.y = lerp_angle(_skin.rotation.y, target_angle, handling * delta)
 	_hitbox.global_rotation.y = lerp_angle(_hitbox.rotation.y, target_angle, handling * delta)
+
+
+#
+#func _on_sub_viewport_container_gui_input(event: InputEvent) -> void:
+	#var is_camera_motion := (
+		#event is InputEventMouseMotion and
+		#Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
+	#)
+	#if is_camera_motion:
+		#_camera_input_direction = event.screen_relative * mouse_sensitivity

@@ -2,13 +2,21 @@ extends Node3D
 
 # define constants for accessing checkpoint and red dot in map
 @onready var checkpoint = $Checkpoint
+@onready var checkpoint2 = $Checkpoint2
 @onready var close_but = $CanvasLayer/UI/NavBar/Button
 
 
 # Initialise some variables for required functions to run for the leaderboard and timings
 var leaderboard = "res://game/second-track/Leaderboard.txt"
+
 var time = "00:00"
 var current = 0
+
+var time1 = "00:00"
+var time2 = "00:00"
+
+var player_win = 0
+
 var write_back = ""
 var label_write = ""
 var file = ""
@@ -89,12 +97,12 @@ const cp_pts_lgth = len(cp_pts[0])
 
 # The player starts at position 0
 var player_pos = 0
-
+var player_pos2 = 0
 
 # This is for moving the checkpoint and updating when the player passes through it
 func _on_checkpoint_area_exited(area: Area3D) -> void:
 	var player = area.get_parent()
-	if player.name == "Player" and UiLoader.running:
+	if player.name == "Player" and not GlobalData.p1_finish and UiLoader.running:
 		var in_vec = cp_pts[0][player_pos % cp_pts_lgth]
 		var in_rot = cp_pts[1][player_pos % cp_pts_lgth]
 		player_pos += 1
@@ -104,18 +112,26 @@ func _on_checkpoint_area_exited(area: Area3D) -> void:
 			player_pos = 0
 			
 			# Set running to false so teleportation is disabled, load the leaderboard screen
-			UiLoader.running = false
-			UiLoader.load_into_men_space("res://main-menu/winner/winner.tscn")
-			close_but.visible = true
+			GlobalData.p1_finish = true
+			if GlobalData.two_player:
+				if GlobalData.p2_finish and GlobalData.p1_finish:
+					UiLoader.running = false
+				time1 = time
+				two_player_scene(time1)
+				
+			else:
+				UiLoader.running = false
+				UiLoader.load_into_men_space("res://main-menu/winner/winner.tscn")
+				close_but.visible = true
+				
+				# Edit the leaderboard player scores after adding the current ones
+				label_write = ""
+				scores.append([int(str(current)), time])
+				scores.sort()
+				for i in range(0, 5):
+					label_write += str(i + 1) + ": " + str(scores[i][1]) + "\n"
 			
-			# Edit the leaderboard player scores after adding the current ones
-			label_write = ""
-			scores.append([int(str(current)), time])
-			scores.sort()
-			for i in range(0, 5):	
-				label_write += str(i + 1) + ": " + str(scores[i][1]) + "\n"
-		
-			$CanvasLayer/MenuSpace/Control/Top_Scores.text = label_write
+				$CanvasLayer/MenuSpace/Control/Top_Scores.text = label_write
 			
 		# Make sure the checkpoint deoesnt teleport when you finish 
 		else:
@@ -128,7 +144,7 @@ func _on_checkpoint_area_exited(area: Area3D) -> void:
 			
 func _process(delta: float) -> void:
 	# When the game is running, start the label timer on the screen and it will update, this updates every frame
-	if UiLoader.running:
+	if UiLoader.running: 
 		current = round((Time.get_ticks_msec() - UiLoader.elapsed) / 1000)
 		
 		# Get it in minutes and seconds
@@ -140,5 +156,66 @@ func _process(delta: float) -> void:
 		time[0] = mins[1]
 		
 		# Edit the time 
-		$CanvasLayer/Time.text = time
+		if GlobalData.two_player:
+			if not GlobalData.p1_finish:
+				$CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Time.text = time
+			if not GlobalData.p2_finish:
+				$CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Time2.text = time
+		else:
+			if not GlobalData.p1_finish:
+				$CanvasLayer/MenuSpace/SubViewportContainer/SubViewport/Time.text = time
+
+func two_player_scene(time) -> void:
 	
+	
+	
+	if GlobalData.p1_finish and not GlobalData.p2_finish:
+		var scene = load("res://main-menu/winner/winner1.tscn")
+		var instance = scene.instantiate()
+		$CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport.add_child(instance)
+		$CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Control/Top_Scores.text = "Player 1 wins!\n" + time
+		player_win = 1
+	elif not GlobalData.p1_finish and GlobalData.p2_finish:
+		var scene = load("res://main-menu/winner/winner2.tscn")
+		var instance = scene.instantiate()
+		$CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport.add_child(instance)
+		$CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Control2/Top_Scores.text = "Player 2 wins!\n" + time
+		player_win = 2
+	else:
+		if player_win == 2:
+			var scene = load("res://main-menu/winner/winner1.tscn")
+			var instance = scene.instantiate()
+			$CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport.add_child(instance)
+			$CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Control/Top_Scores.text = "Player 1 loses!\n" + time
+		else:
+			var scene = load("res://main-menu/winner/winner2.tscn")
+			var instance = scene.instantiate()
+			$CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport.add_child(instance)
+			$CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Control2/Top_Scores.text = "Player 2 loses!\n" + time
+
+func _on_checkpoint_2_area_exited(area: Area3D) -> void:
+	var player = area.get_parent()
+	if player.name == "Player2" and not GlobalData.p2_finish and UiLoader.running:
+		var in_vec = cp_pts[0][player_pos2 % cp_pts_lgth]
+		var in_rot = cp_pts[1][player_pos2 % cp_pts_lgth]
+		player_pos2 += 1
+		
+		# When the player does 1 lap of the game
+		if (player_pos2 - 1) / cp_pts_lgth >= 1:
+			player_pos2 = 0
+			# Set running to false so teleportation is disabled, load the leaderboard screen
+			
+			GlobalData.p2_finish = true
+			if GlobalData.two_player:
+				if GlobalData.p2_finish and GlobalData.p1_finish:
+					UiLoader.running = false
+				time2 = time
+				two_player_scene(time2)
+				
+		# Make sure the checkpoint deoesnt teleport when you finish 
+		else:
+			checkpoint2.global_transform.origin = Vector3(in_vec[0], in_vec[1], in_vec[2])
+			checkpoint2.rotation = Vector3(deg_to_rad(in_rot[0]), deg_to_rad(in_rot[1]), deg_to_rad(in_rot[2]))
+		
+			
+			

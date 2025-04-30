@@ -1,17 +1,16 @@
-[gd_scene load_steps=48 format=3 uid="uid://7svo2702rp0y"]
+[gd_scene load_steps=44 format=3 uid="uid://7svo2702rp0y"]
 
-[ext_resource type="Script" uid="uid://d0x4fvctqrcix" path="res://game/second-track/second_track.gd" id="1_gb1yd"]
+[ext_resource type="Script" uid="uid://bde7p51ki0yhp" path="res://game/second-track/second_track.gd" id="1_gb1yd"]
 [ext_resource type="ArrayMesh" uid="uid://ccuthpw31mcyn" path="res://game/second-track/Secondtrack/Secondtrack.obj" id="2_gb1yd"]
-[ext_resource type="ArrayMesh" uid="uid://u8b3f1hc3qey" path="res://kenney_car-kit/Models/OBJ format/sedan-sports.obj" id="2_ig56e"]
 [ext_resource type="ArrayMesh" uid="uid://cao8teiy6mfp8" path="res://game/second-track/Tree/Tree.obj" id="3_ig56e"]
 [ext_resource type="ArrayMesh" uid="uid://c08cveuxfi26p" path="res://game/second-track/Rock/Rock.obj" id="4_occ6e"]
-[ext_resource type="Script" uid="uid://cxm43255pvws0" path="res://game/test-files/new_player.gd" id="5_gb1yd"]
 [ext_resource type="ArrayMesh" uid="uid://c002c81mwudm0" path="res://game/second-track/Cone/Cone.obj" id="5_qjjby"]
-[ext_resource type="Texture2D" uid="uid://blwhr8kquqlfx" path="res://game/second-track/Screenshot 2025-04-17 223841.png" id="7_ig56e"]
-[ext_resource type="Script" uid="uid://di3m18035dyj1" path="res://game/second-track/nav_bar.gd" id="7_occ6e"]
+[ext_resource type="Texture2D" uid="uid://boxanntgd27fn" path="res://game/second-track/Screenshot 2025-04-17 223841.png" id="7_ig56e"]
+[ext_resource type="Script" uid="uid://dti0v26kmljxl" path="res://game/second-track/nav_bar.gd" id="7_occ6e"]
 [ext_resource type="ArrayMesh" uid="uid://cnwjuvojonwas" path="res://game/second-track/Finish Line/Finish Line.obj" id="7_soe5c"]
 [ext_resource type="ArrayMesh" uid="uid://cwuj22jax3uya" path="res://game/second-track/Finish Line Words/Part Studio 1.obj" id="8_6ng4d"]
-[ext_resource type="Script" uid="uid://caonljctffrkj" path="res://game/test-files/new_player2.gd" id="11_old6m"]
+[ext_resource type="PackedScene" uid="uid://diip1j5mp2l7b" path="res://game/second-track/Player_1.tscn" id="9_6ng4d"]
+[ext_resource type="PackedScene" uid="uid://dmeua45p3rg6o" path="res://game/second-track/Player_2.tscn" id="10_old6m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_soe5c"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -110,13 +109,6 @@ viewport_path = NodePath("SubViewport")
 [sub_resource type="GDScript" id="GDScript_qjjby"]
 script/source = "extends MenuButton
 "
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_h12lf"]
-size = Vector3(0.5, 0.5, 0.5)
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ig56e"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_occ6e"]
 
 [sub_resource type="GDScript" id="GDScript_occ6e"]
 script/source = "extends Panel
@@ -520,6 +512,7 @@ skeleton = NodePath("../..")
 transform = Transform3D(0.271954, 0, 0.126653, 0, 0.3, 0, -0.126653, 0, 0.271954, 0, 1.667, 22.333)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Checkpoint"]
+layers = 2
 material_override = SubResource("StandardMaterial3D_j8ggn")
 transparency = 0.35
 mesh = SubResource("BoxMesh_gb1yd")
@@ -528,6 +521,24 @@ mesh = SubResource("BoxMesh_gb1yd")
 shape = SubResource("ConcavePolygonShape3D_j8ggn")
 
 [node name="Sprite3D" type="Sprite3D" parent="Checkpoint"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+transparency = 1.0
+texture = SubResource("ViewportTexture_gb1yd")
+
+[node name="Checkpoint2" type="Area3D" parent="."]
+transform = Transform3D(0.271954, 0, 0.126653, 0, 0.3, 0, -0.126653, 0, 0.271954, 0, 1.667, 22.333)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Checkpoint2"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_j8ggn")
+transparency = 0.35
+mesh = SubResource("BoxMesh_gb1yd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Checkpoint2"]
+shape = SubResource("ConcavePolygonShape3D_j8ggn")
+
+[node name="Sprite3D" type="Sprite3D" parent="Checkpoint2"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 transparency = 1.0
 texture = SubResource("ViewportTexture_gb1yd")
@@ -593,101 +604,12 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 
-[node name="SubViewportContainer3" type="SubViewportContainer" parent="CanvasLayer/MenuSpace"]
-layout_mode = 2
-offset_left = 589.0
-offset_right = 1151.0
-offset_bottom = 608.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-stretch = true
+[node name="SubViewportContainer2" parent="CanvasLayer/MenuSpace" instance=ExtResource("9_6ng4d")]
+layout_mode = 0
 
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/MenuSpace/SubViewportContainer3"]
-handle_input_locally = false
-size = Vector2i(562, 608)
-render_target_update_mode = 4
-
-[node name="Player2" type="CharacterBody3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.52407, -0.36363, 21.1928)
-script = ExtResource("11_old6m")
-
-[node name="Area3D" type="Area3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Player2"]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.535499, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Player2/Area3D"]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0.272911, 0)
-shape = SubResource("BoxShape3D_h12lf")
-
-[node name="Sedan2" type="MeshInstance3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Player2"]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500002, 0)
-mesh = ExtResource("2_ig56e")
-skeleton = NodePath("../../../../../..")
-
-[node name="Hitbox2" type="CollisionShape3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Player2"]
-unique_name_in_owner = true
-transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, -1.5, 0, 1.5, -6.55671e-08, 0, 1.21137, 0)
-shape = SubResource("CapsuleShape3D_ig56e")
-
-[node name="CameraPivot2" type="Node3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Player2"]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.963537, -0.267575, 0, 0.267575, 0.963537, 0, 1.46449, -1.77636e-15)
-
-[node name="SpringArm3D" type="SpringArm3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Player2/CameraPivot2"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-shape = SubResource("SphereShape3D_occ6e")
-spring_length = 4.0
-
-[node name="Camera3D2" type="Camera3D" parent="CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Player2/CameraPivot2/SpringArm3D"]
-unique_name_in_owner = true
-
-[node name="SubViewportContainer2" type="SubViewportContainer" parent="CanvasLayer/MenuSpace"]
-layout_mode = 2
-offset_right = 590.0
-offset_bottom = 608.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-stretch = true
-
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/MenuSpace/SubViewportContainer2"]
-handle_input_locally = false
-size = Vector2i(590, 608)
-render_target_update_mode = 4
-
-[node name="Player" type="CharacterBody3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport"]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.52407, -0.36363, 24.8565)
-script = ExtResource("5_gb1yd")
-
-[node name="Area3D" type="Area3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player"]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.535499, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player/Area3D"]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0.272911, 0)
-shape = SubResource("BoxShape3D_h12lf")
-
-[node name="Sedan" type="MeshInstance3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player"]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500002, 0)
-mesh = ExtResource("2_ig56e")
-skeleton = NodePath("../../../../../..")
-
-[node name="Hitbox" type="CollisionShape3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player"]
-unique_name_in_owner = true
-transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, -1.5, 0, 1.5, -6.55671e-08, 0, 1.21137, 0)
-shape = SubResource("CapsuleShape3D_ig56e")
-
-[node name="CameraPivot" type="Node3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player"]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.963537, -0.267575, 0, 0.267575, 0.963537, 0, 1.46449, -1.77636e-15)
-
-[node name="SpringArm3D" type="SpringArm3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player/CameraPivot"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-shape = SubResource("SphereShape3D_occ6e")
-spring_length = 4.0
-
-[node name="Camera3D" type="Camera3D" parent="CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player/CameraPivot/SpringArm3D"]
-unique_name_in_owner = true
+[node name="SubViewportContainer3" parent="CanvasLayer/MenuSpace" instance=ExtResource("10_old6m")]
+layout_mode = 1
+offset_right = 1.15198
 
 [node name="Map" type="Panel" parent="CanvasLayer"]
 visibility_layer = 3
@@ -730,20 +652,7 @@ offset_right = -181.0
 offset_bottom = -184.0
 color = Color(0.191791, 0, 0.984342, 1)
 
-[node name="Time" type="Label" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_left = 0.878
-anchor_top = 0.108
-anchor_right = 0.964
-anchor_bottom = 0.199
-offset_left = 0.543945
-offset_top = 0.0159988
-offset_right = -0.528076
-offset_bottom = 0.0479889
-theme_override_font_sizes/font_size = 30
-text = "00:00"
-
 [connection signal="area_exited" from="Checkpoint" to="." method="_on_checkpoint_area_exited"]
-[connection signal="body_exited" from="Checkpoint" to="." method="_on_checkpoint_body_exited"]
+[connection signal="area_exited" from="Checkpoint2" to="." method="_on_checkpoint_2_area_exited"]
 [connection signal="toggled" from="CanvasLayer/UI/NavBar/MapButton" to="CanvasLayer/UI/NavBar" method="_on_map_button_toggled"]
 [connection signal="pressed" from="CanvasLayer/UI/NavBar/Button" to="CanvasLayer/UI/NavBar" method="_on_button_pressed"]

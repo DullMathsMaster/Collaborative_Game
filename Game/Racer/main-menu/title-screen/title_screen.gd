@@ -1,7 +1,13 @@
 extends Control
 
-@onready var close_but = get_node("/root/Second-track/CanvasLayer/UI/NavBar/Button") 
-@onready var car = get_node("/root/Second-track/CanvasLayer/MenuSpace/SubViewportContainer/SubViewport/Player")
+#@onready var close_but = get_node("/root/Second-track/CanvasLayer/UI/NavBar/Button") 
+#@onready var car = get_node("/root/Second-track/CanvasLayer/MenuSpace/SubViewportContainer2/SubViewport/Player")
+
+
+func _ready() -> void:
+	GlobalData.player_one_car = -1
+	GlobalData.player_two_car = -1
+
 
 func _on_start_button_pressed() -> void:
 	
