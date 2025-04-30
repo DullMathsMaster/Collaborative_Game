@@ -15,6 +15,8 @@ var current = 0
 var time1 = "00:00"
 var time2 = "00:00"
 
+var player_win = 0
+
 var write_back = ""
 var label_write = ""
 var file = ""
@@ -165,7 +167,7 @@ func _process(delta: float) -> void:
 
 func two_player_scene(time) -> void:
 	
-	var player_win = 0
+	
 	
 	if GlobalData.p1_finish and not GlobalData.p2_finish:
 		var scene = load("res://main-menu/winner/winner1.tscn")
@@ -179,7 +181,7 @@ func two_player_scene(time) -> void:
 		$CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport.add_child(instance)
 		$CanvasLayer/MenuSpace/SubViewportContainer3/SubViewport/Control2/Top_Scores.text = "Player 2 wins!\n" + time
 		player_win = 2
-	elif GlobalData.p1_finish and GlobalData.p2_finish:
+	else:
 		if player_win == 2:
 			var scene = load("res://main-menu/winner/winner1.tscn")
 			var instance = scene.instantiate()
